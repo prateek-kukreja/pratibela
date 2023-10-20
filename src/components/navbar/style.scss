@@ -1,0 +1,55 @@
+nav {
+  background-color: #090a0b;
+  color: #ffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.pratibela-nav {
+  display: flex;
+  height: 8rem;
+  align-items: center;
+  gap: 3rem;
+}
+
+.pratibela-nav__logo a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffff;
+  display: "block";
+}
+
+.pratibela-nav__menu {
+  display: flex;
+  gap: 2.25rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+
+  li {
+    list-style: none;
+
+    a {
+      position: relative;
+      color: #fff;
+      font-weight: 500;
+      text-decoration: none;
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: -0.25rem;
+        height: 0.1rem;
+        width: 0;
+        background-color: grey;
+        transition: all 0.35s ease-in-out;
+      }
+
+      &:hover:before {
+        width: 100%;
+      }
+    }
+  }
+}
