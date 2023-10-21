@@ -1,0 +1,28 @@
+.byline {
+  display: flex;
+  gap: 1rem;
+  padding-left: 4rem;
+
+  @media (max-width: 650px) {
+    padding-left: 0;
+  }
+
+  &__img img {
+    height: 3.2rem;
+  }
+
+  &__text p {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #738a94;
+    margin-bottom: 0;
+    font-family: "Poppins", sans-serif;
+  }
+
+  &__date {
+    text-align: left;
+    display: flex;
+    gap: 1rem;
+  }
+}
