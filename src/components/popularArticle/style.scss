@@ -1,0 +1,32 @@
+.popular-articles-content {
+  margin-top: 6rem;
+
+  h1 {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 2.75rem;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.4rem;
+
+    a {
+      text-decoration: none;
+      color: #26a8e0;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+}
+
+.divider {
+  height: 0.016rem;
+  background-color: #738a94;
+  width: 100%;
+}
