@@ -7,8 +7,8 @@ function Postcard({ img, title, text }) {
     <>
       <div className="postcard-content">
         <div className="postcard-content__img">
-          <Link to="">
-            <img src={img} alt="" />{" "}
+          <Link to="dilli-o-dilli">
+            <img src={img} alt="" />
           </Link>
         </div>
         <div className="postcard-content__text">

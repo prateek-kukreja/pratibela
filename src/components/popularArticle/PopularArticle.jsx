@@ -1,6 +1,6 @@
 import "./style.scss";
 import Design1 from "../postcards/design1/Design1Postcard";
-import DilliODilli from "../../images/blog/dilli-o-dilli.png";
+import DilliODilli from "../../images/blog/dilli/dilli-o-dilli.png";
 import { Link } from "react-router-dom";
 import Design2 from "../postcards/design2/Design2Postcard";
 

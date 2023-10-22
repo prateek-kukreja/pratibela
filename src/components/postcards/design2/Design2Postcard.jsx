@@ -11,7 +11,7 @@ function Postcard() {
       <div className="postcard-b-section">
         {filteredBlogs.map((blog) => (
           <div key={blog.id} className="postcard-b-content">
-            <Link to="">
+            <Link to={blog.link}>
               <div className="postcard-b-content__img">
                 <img src={blog.img} alt="" />
               </div>
