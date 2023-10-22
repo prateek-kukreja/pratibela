@@ -70,3 +70,36 @@
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
 }
+
+/* Blog Header */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.blog-hero-section {
+  background-color: #090a0b;
+  color: #ffff;
+}
+
+.blog-hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+
+  &__text {
+    text-align: center;
+
+    h1 {
+      font-size: 5.2rem;
+      font-family: "Open Sans", sans-serif;
+      text-transform: capitalize;
+    }
+
+    p {
+      font-size: 2rem;
+      color: #c4c4c5;
+      font-family: "Raleway", sans-serif;
+      margin-bottom: 4rem;
+    }
+  }
+}
