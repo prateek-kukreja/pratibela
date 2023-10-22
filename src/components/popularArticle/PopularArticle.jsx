@@ -1,8 +1,8 @@
 import "./style.scss";
-import Design1 from "../postcards/design1/Design1Postcard";
+import DesignA from "../postcards/designA/DesignAPostcard";
 import DilliODilli from "../../images/blog/dilli/dilli-o-dilli.png";
 import { Link } from "react-router-dom";
-import Design2 from "../postcards/design2/Design2Postcard";
+import DesignB from "../postcards/designB/DesignBPostcard";
 
 function PopularArticles() {
   return (
@@ -17,13 +17,13 @@ function PopularArticles() {
                 on the blog →
               </Link>
             </p>
-            <Design1
+            <DesignA
               img={DilliODilli}
               title="Dilli-O-Dilli"
               text="Dilli sheher ki baat hi kuch aur hai! Delhi has always been portrayed very beautifully in cinema and books.."
             />
             <div className="divider"></div>
-            <Design2 />
+            <DesignB />
             <div className="divider"></div>
             <div
               className="popular-articles-content"
