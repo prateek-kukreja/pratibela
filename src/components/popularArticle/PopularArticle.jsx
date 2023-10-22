@@ -2,6 +2,7 @@ import "./style.scss";
 import Design1 from "../postcards/design1/Design1Postcard";
 import DilliODilli from "../../images/blog/dilli-o-dilli.png";
 import { Link } from "react-router-dom";
+import Design2 from "../postcards/design2/Design2Postcard";
 
 function PopularArticles() {
   return (
@@ -21,6 +22,8 @@ function PopularArticles() {
               title="Dilli-O-Dilli"
               text="Dilli sheher ki baat hi kuch aur hai! Delhi has always been portrayed very beautifully in cinema and books.."
             />
+            <div className="divider"></div>
+            <Design2 />
             <div className="divider"></div>
           </div>
         </div>
