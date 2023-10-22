@@ -25,6 +25,17 @@ function PopularArticles() {
             <div className="divider"></div>
             <Design2 />
             <div className="divider"></div>
+            <div
+              className="popular-articles-content"
+              style={{ marginTop: "12rem", marginBottom: "10rem" }}
+            >
+              <p>
+                Read more posts{" "}
+                <Link onClick={() => window.scrollTo(0, 0)} to="">
+                  on the blog →
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       </section>
