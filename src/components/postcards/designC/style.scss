@@ -1,4 +1,16 @@
-.postcard-b-content {
+.postcard-c-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin: 4rem 0;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    margin: 2rem 0;
+  }
+}
+
+.postcard-c-content {
   a {
     text-decoration: none;
   }

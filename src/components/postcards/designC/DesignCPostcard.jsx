@@ -8,17 +8,17 @@ function Postcard() {
 
   return (
     <>
-      <div className="postcard-b-section">
+      <div className="postcard-c-section">
         {filteredBlogs.map((blog) => (
-          <div key={blog.id} className="postcard-b-content">
+          <div key={blog.id} className="postcard-c-content">
             <Link to={blog.link}>
               <div
                 onClick={() => window.scrollTo(0, 0)}
-                className="postcard-b-content__img"
+                className="postcard-c-content__img"
               >
                 <img src={blog.img} alt="" />
               </div>
-              <div className="postcard-b-content__text">
+              <div className="postcard-c-content__text">
                 <h2>{blog.title}</h2>
                 <p>{blog.text}</p>
               </div>

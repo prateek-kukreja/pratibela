@@ -1,4 +1,11 @@
-.postcard-b-content {
+.postcard-d-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  margin: 4rem 0;
+}
+
+.postcard-d-content {
   a {
     text-decoration: none;
   }

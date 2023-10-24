@@ -1,11 +1,11 @@
 .postcard-b-section {
-  display: flex;
-  gap: 4.25%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
   margin: 4rem 0;
 
-  @media (max-width: 650px) {
-    flex-direction: column;
-    gap: 4rem;
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
     margin: 2rem 0;
   }
 }
