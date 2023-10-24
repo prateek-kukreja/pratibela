@@ -1,16 +1,23 @@
 import "./style.scss";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <>
-      <footer class="pratibela-footer">
+      <footer className="pratibela-footer">
         <div className="container">
-          <div class="pratibela-footer-content">
-            <div class="copyright">
-              © <a href="#">Naman Rakheja's Website</a> 2023
+          <div className="pratibela-footer-content">
+            <div className="copyright">
+              ©{" "}
+              <a href="https://github.com/prateekwho/pratibela" target="_blank">
+                Naman Rakheja's Website
+              </a>{" "}
+              2023
             </div>
-            <div class="pratibela-footer-list">
-              <a href="#">Blogs</a>
+            <div className="pratibela-footer-list">
+              <Link onClick={() => window.scrollTo(0, 0)} to="/blog">
+                Blogs
+              </Link>
               <a href="https://www.instagram.com/nams_rakheja/" target="_blank">
                 Instagram
               </a>
@@ -18,8 +25,15 @@ function Footer() {
           </div>
           <div className="pratibela-footer__website-creator">
             <div>
-              Made by <a href="https://prateek.wtf/"> Prateek Kukreja</a> and
-              Design by <a href="https://monicalent.com/">Monica Lent</a>
+              Made by{" "}
+              <a href="https://prateek.wtf/" target="_blank">
+                {" "}
+                Prateek Kukreja
+              </a>{" "}
+              and Design by{" "}
+              <a href="https://monicalent.com/" target="_blank">
+                Monica Lent
+              </a>
             </div>
           </div>
         </div>

@@ -12,7 +12,10 @@ function Postcard() {
         {filteredBlogs.map((blog) => (
           <div key={blog.id} className="postcard-b-content">
             <Link to={blog.link}>
-              <div className="postcard-b-content__img">
+              <div
+                onClick={() => window.scrollTo(0, 0)}
+                className="postcard-b-content__img"
+              >
                 <img src={blog.img} alt="" />
               </div>
               <div className="postcard-b-content__text">

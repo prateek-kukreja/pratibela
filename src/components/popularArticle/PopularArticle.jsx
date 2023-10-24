@@ -13,7 +13,7 @@ function PopularArticles() {
             <h1>popular articles</h1>
             <p>
               Read more posts &nbsp;
-              <Link onClick={() => window.scrollTo(0, 0)} to="">
+              <Link onClick={() => window.scrollTo(0, 0)} to="/blog">
                 on the blog →
               </Link>
             </p>
@@ -31,7 +31,7 @@ function PopularArticles() {
             >
               <p>
                 Read more posts{" "}
-                <Link onClick={() => window.scrollTo(0, 0)} to="">
+                <Link onClick={() => window.scrollTo(0, 0)} to="/blog">
                   on the blog →
                 </Link>
               </p>
