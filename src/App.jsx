@@ -5,6 +5,7 @@ import DilliODilli from "./components/blogs/DilliODilli";
 import HowDoSomePeopleConsumeSoLittle from "./components/blogs/HowDoSomePeopleConsumeSoLittle";
 import WhatsCallingMeToWrite from "./components/blogs/WhatsCallingMeToWrite";
 import Blog from "./pages/Blog";
+import About from "./pages/About";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           path="whats-calling-me-to-write?"
           element={<WhatsCallingMeToWrite />}
         />
+        <Route path="about" element={<About />} />
       </Routes>
     </>
   );
