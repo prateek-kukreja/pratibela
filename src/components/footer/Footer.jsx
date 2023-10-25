@@ -26,12 +26,12 @@ function Footer() {
           <div className="pratibela-footer__website-creator">
             <div>
               Made by{" "}
-              <a href="https://prateek.wtf/" target="_blank">
+              <a href="https://github.com/prateekwho" target="_blank">
                 {" "}
                 Prateek Kukreja
               </a>{" "}
               and Design by{" "}
-              <a href="https://monicalent.com/" target="_blank">
+              <a href="https://github.com/mlent/blog" target="_blank">
                 Monica Lent
               </a>
             </div>
