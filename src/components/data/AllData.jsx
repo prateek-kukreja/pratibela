@@ -25,6 +25,7 @@ export const Blogs = [
     img: ThatsLife,
     title: "That’s life",
     text: "I sit in the good daylight, and the pattern of the window panes reflect the lightest..",
+    link: "/thats-life",
   },
   {
     id: 4,
