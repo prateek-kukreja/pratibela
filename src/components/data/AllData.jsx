@@ -32,6 +32,7 @@ export const Blogs = [
     img: Beach,
     title: "Life by the sea",
     text: "I wish I could live by the sea, or some days I wish I could just live in my apartment..",
+    link: "/life-by-the-sea",
   },
   {
     id: 5,
