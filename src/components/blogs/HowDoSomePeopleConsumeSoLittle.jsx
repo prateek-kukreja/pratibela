@@ -1,36 +1,36 @@
-import "./stylesheets/HowDoSomePeopleConsumeSoLittle.scss";
+import "./style.scss";
 import BylineImg from "../../images/byline/naman-byline.png";
 import Img1 from "../../images/blog/metabolism/old-lady-hands.png";
 import Img2 from "../../images/blog/metabolism/slum-lady.png";
 import Img3 from "../../images/blog/metabolism/sleeping-man-on-foothpath.png";
 import Img4 from "../../images/blog/metabolism/rickshaw-guy.png";
+import Newsletter from "../newsletter/Newsletter";
+import Footer from "../footer/Footer";
 
 function Blog() {
   return (
     <>
       <section className="blogcontent-section">
-        <div className="container">
-          <div className="blogcontent-heading">
-            <h1>How do some people consume so little?</h1>
-            <div className="blogcontent-heading-divider"></div>
-            <div className="blogcontent-heading-byline">
-              <div className="blogcontent-heading-byline__img">
-                <img src={BylineImg} alt="" />
-              </div>
-              <div className="blogcontent-heading-byline__text">
-                <p>naman rakheja</p>
-                <p className="blogcontent-heading-byline__date">
-                  <time dateTime="2021-12-31">
-                    PUBLISHED ON 25 NOVEMBER 2020
-                  </time>
-                  <span className="bull">•</span> 10 min read
-                </p>
-              </div>
+        <div className="blogcontent-heading">
+          <h1>How do some people consume so little?</h1>
+          <div className="blogcontent-heading-divider"></div>
+          <div className="blogcontent-heading-byline">
+            <div className="blogcontent-heading-byline__img">
+              <img src={BylineImg} alt="" />
+            </div>
+            <div className="blogcontent-heading-byline__text">
+              <p>naman rakheja</p>
+              <p className="blogcontent-heading-byline__date">
+                <time dateTime="2021-12-31">PUBLISHED ON 25 NOVEMBER 2020</time>
+                <span className="bull">•</span> 10 min read
+              </p>
             </div>
           </div>
-          <div className="blogcontent-image">
-            <img src={Img1} alt="" />
-          </div>
+        </div>
+        <div className="blogcontent-big-image">
+          <img src={Img1} alt="" />
+        </div>
+        <div className="container">
           <div className="blogcontent-text">
             <p>
               How do some people simply breathe so little air? How their
@@ -61,11 +61,7 @@ function Blog() {
               less compassionate and more sceptical about these people with each
               passing hour.
             </p>
-          </div>
-          <div className="blogcontent-image">
             <img src={Img2} alt="" />
-          </div>
-          <div className="blogcontent-text">
             <p>
               If not from the same tap we drink or the same size of land we own,
               we still share the same sources of survival. We get water from the
@@ -95,11 +91,7 @@ function Blog() {
               people around us who own so less and yet they absorb so much? And
               despite taking a call to action we choose to be numb about it.
             </p>
-          </div>
-          <div className="blogcontent-image">
             <img src={Img3} alt="" />
-          </div>
-          <div className="blogcontent-text">
             <p>
               Through this piece of writing, I am not compelling anyone to
               address this problem by simply putting currency notes or coins in
@@ -123,11 +115,7 @@ function Blog() {
               service from street vendors or say rickshawala, and if we find the
               cost reasonable, we should avoid bargaining because it’s a habit.
             </p>
-          </div>
-          <div className="blogcontent-image">
             <img src={Img4} alt="" />
-          </div>
-          <div className="blogcontent-text">
             <p>
               Most importantly, at the end of the day, we all have the power to
               vote for a candidate who is human enough to be committed to this
@@ -139,6 +127,8 @@ function Blog() {
           </div>
         </div>
       </section>
+      <Newsletter />
+      <Footer />
     </>
   );
 }

@@ -1,34 +1,36 @@
-import "./stylesheets/WhatsCallingMeToWrite.scss";
+import "./style.scss";
+
 import BylineImg from "../../images/byline/naman-byline.png";
 import Img1 from "../../images/blog/inspiration/lamp-photo.png";
 import Img2 from "../../images/blog/inspiration/ballet-girl.png";
 import Img3 from "../../images/blog/inspiration/blur-light.png";
+import Newsletter from "../newsletter/Newsletter";
+import Footer from "../footer/Footer";
+
 function Blog() {
   return (
     <>
       <section className="blogcontent-section">
-        <div className="container">
-          <div className="blogcontent-heading">
-            <h1>How do some people consume so little?</h1>
-            <div className="blogcontent-heading-divider"></div>
-            <div className="blogcontent-heading-byline">
-              <div className="blogcontent-heading-byline__img">
-                <img src={BylineImg} alt="" />
-              </div>
-              <div className="blogcontent-heading-byline__text">
-                <p>naman rakheja</p>
-                <p className="blogcontent-heading-byline__date">
-                  <time dateTime="2021-12-31">
-                    PUBLISHED ON 25 NOVEMBER 2020
-                  </time>
-                  <span className="bull">•</span> 10 min read
-                </p>
-              </div>
+        <div className="blogcontent-heading">
+          <h1>What’s calling me to write?</h1>
+          <div className="blogcontent-heading-divider"></div>
+          <div className="blogcontent-heading-byline">
+            <div className="blogcontent-heading-byline__img">
+              <img src={BylineImg} alt="" />
+            </div>
+            <div className="blogcontent-heading-byline__text">
+              <p>naman rakheja</p>
+              <p className="blogcontent-heading-byline__date">
+                <time dateTime="2021-12-31">PUBLISHED ON 25 NOVEMBER 2020</time>
+                <span className="bull">•</span> 10 min read
+              </p>
             </div>
           </div>
-          <div className="blogcontent-image">
-            <img src={Img1} alt="" />
-          </div>
+        </div>
+        <div className="blogcontent-big-image">
+          <img src={Img1} alt="" />
+        </div>
+        <div className="container">
           <div className="blogcontent-text">
             <p>
               All of it had started from writing paragraphs on different
@@ -58,11 +60,7 @@ function Blog() {
               helps to introspect and to channelise thoughts and opinions quite
               often.
             </p>
-          </div>
-          <div className="blogcontent-image">
             <img src={Img2} alt="" />
-          </div>
-          <div className="blogcontent-text">
             <p>
               Growing up always feels like putting ourselves on the cycle of
               metamorphosis. I want to talk about metamorphosis and how some
@@ -77,11 +75,7 @@ function Blog() {
               lights there exist a world of these people which everyone often
               chooses to ignore.
             </p>
-          </div>
-          <div className="blogcontent-image">
             <img src={Img3} alt="" />
-          </div>
-          <div className="blogcontent-text">
             <p>
               Writing letters on a daily basis, if not to someone else but to
               myself only, has made me a bit more expressive because one of my
@@ -94,6 +88,8 @@ function Blog() {
           </div>
         </div>
       </section>
+      <Newsletter />
+      <Footer />
     </>
   );
 }

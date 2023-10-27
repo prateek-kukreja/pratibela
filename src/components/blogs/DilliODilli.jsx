@@ -1,4 +1,4 @@
-import "./stylesheets/DilliODilli.scss";
+import "./style.scss";
 import BylineImg from "../../images/byline/naman-byline.png";
 import Img1 from "../../images/blog/dilli/dilli-o-dilli.png";
 import Img2 from "../../images/blog/dilli/lotus-temple.png";
@@ -7,33 +7,33 @@ import Img4 from "../../images/blog/dilli/dilli-metro.png";
 import Img5 from "../../images/blog/dilli/book-market.png";
 import Img6 from "../../images/blog/dilli/moksh-street.png";
 import Img7 from "../../images/blog/dilli/dilli-haat.png";
+import Newsletter from "../newsletter/Newsletter";
+import Footer from "../footer/Footer";
 
 function Blog() {
   return (
     <>
       <section className="blogcontent-section">
-        <div className="container">
-          <div className="blogcontent-heading">
-            <h1>Dilli-O-Dilli</h1>
-            <div className="blogcontent-heading-divider"></div>
-            <div className="blogcontent-heading-byline">
-              <div className="blogcontent-heading-byline__img">
-                <img src={BylineImg} alt="" />
-              </div>
-              <div className="blogcontent-heading-byline__text">
-                <p>naman rakheja</p>
-                <p className="blogcontent-heading-byline__date">
-                  <time dateTime="2021-12-31">
-                    PUBLISHED ON 25 NOVEMBER 2020
-                  </time>
-                  <span className="bull">•</span> 10 min read
-                </p>
-              </div>
+        <div className="blogcontent-heading">
+          <h1>Dilli-O-Dilli</h1>
+          <div className="blogcontent-heading-divider"></div>
+          <div className="blogcontent-heading-byline">
+            <div className="blogcontent-heading-byline__img">
+              <img src={BylineImg} alt="" />
+            </div>
+            <div className="blogcontent-heading-byline__text">
+              <p>naman rakheja</p>
+              <p className="blogcontent-heading-byline__date">
+                <time dateTime="2021-12-31">PUBLISHED ON 25 NOVEMBER 2020</time>
+                <span className="bull">•</span> 10 min read
+              </p>
             </div>
           </div>
-          <div className="blogcontent-image">
-            <img src={Img1} alt="" />
-          </div>
+        </div>
+        <div className="blogcontent-big-image">
+          <img src={Img1} alt="" />
+        </div>
+        <div className="container">
           <div className="blogcontent-text">
             <p>“Dilli sheher ki baat hi kuch aur hai!”</p>
             <p>
@@ -48,12 +48,8 @@ function Blog() {
               resist its admiration. Hence, there are infinite reasons to love
               this city.
             </p>
-          </div>
-          <div className="blogcontent-image">
-            <img src={Img2} alt="" />
-          </div>
-          <div className="blogcontent-text">
             <h2>1. The bustling old Delhi Bazars</h2>
+            <img src={Img3} alt="" />
             <p>
               As soon as we step out into the clamour of an old Delhi Bazar like
               Chandi Chowk, we can easily sense the festivity. It’s a crowd in
@@ -69,12 +65,8 @@ function Blog() {
               are a merger of a lot of mannequins, the first copies of Manish
               Malhotra, dreams, expectations and the dynamics of life.
             </p>
-          </div>
-          <div className="blogcontent-image">
-            <img src={Img3} alt="" />
-          </div>
-          <div className="blogcontent-text">
             <h2>2. Lifeline of the city: Delhi Metro</h2>
+            <img src={Img4} alt="" />
             <p>
               Delhi metro is similar to the veins in a human body. Like veins
               carry blood inside our body, Delhi metro carries the blood of the
@@ -89,12 +81,8 @@ function Blog() {
               other things of common interests, Delhi metro is absolutely a
               mood. It is like a mini Delhi on the tracks, in a rush, in a move.
             </p>
-          </div>
-          <div className="blogcontent-image">
-            <img src={Img4} alt="" />
-          </div>
-          <div className="blogcontent-text">
             <h2>3. A tryst on a Sunday afternoon: Daryaganj book market</h2>
+            <img src={Img5} alt="" />
             <p>
               The Sunday book market in the “Mahila haat” is one of the obvious
               spots to visit and love in Delhi. The place is often packed with
@@ -104,12 +92,8 @@ function Blog() {
               thing, I feel. In addition to this, books are pocket friendly and
               also in a readable condition. What else does a reader want?
             </p>
-          </div>
-          <div className="blogcontent-image">
-            <img src={Img5} alt="" />
-          </div>
-          <div className="blogcontent-text">
             <h2>4. The culture for street performances</h2>
+            <img src={Img6} alt="" />
             <p>
               Street performances are often spotted around the university campus
               and in the different locations of the city. Students and theatre
@@ -118,12 +102,8 @@ function Blog() {
               Delhi and taking a conclusion or a question home and starting a
               discourse thereafter is the true spirit of a healthy life.
             </p>
-          </div>
-          <div className="blogcontent-image">
-            <img src={Img6} alt="" />
-          </div>
-          <div className="blogcontent-text">
-            <h2> 5. The Heart of India: Dilli Haats</h2>
+            <h2> 5. The Heart of India: Dilli Haat</h2>
+            <img src={Img7} alt="" />
             <p>
               Dilli Haats are very fascinating indeed. The theme-based cultural
               fares at Haats manifest the diversity of India. It’s basically
@@ -134,11 +114,7 @@ function Blog() {
               haat and tie colourful braids in our hair are actually the ones
               adding colours to one of the most vibrant places of Delhi.
             </p>
-          </div>
-          <div className="blogcontent-image">
-            <img src={Img7} alt="" />
-          </div>
-          <div className="blogcontent-text">
+            <img src={Img2} alt="" />
             <p>
               All in all, Delhi is about the bond that we want to cast with it.
               Some bond with the city through their love for food while others
@@ -155,6 +131,8 @@ function Blog() {
           </div>
         </div>
       </section>
+      <Newsletter />
+      <Footer />
     </>
   );
 }

@@ -4,6 +4,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,5 +27,5 @@ body {
 .container {
   max-width: 108rem !important;
   margin: 0 auto !important;
-  padding: 0 2.5rem !important;
+  padding: 0 2rem !important;
 }
