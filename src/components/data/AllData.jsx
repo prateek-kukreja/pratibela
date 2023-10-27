@@ -44,5 +44,6 @@ export const Blogs = [
     img: Book,
     title: "Extracts from a lover’s notebook",
     text: "My letter is as middle class as I am. I will try to talk about stars and moon and… ",
+    link: "/extracts-from-a-lovers-notebook",
   },
 ];

@@ -5,6 +5,7 @@ import DilliODilli from "./components/blogs/DilliODilli";
 import HowDoSomePeopleConsumeSoLittle from "./components/blogs/HowDoSomePeopleConsumeSoLittle";
 import WhatsCallingMeToWrite from "./components/blogs/WhatsCallingMeToWrite";
 import WomanInBrothel from "./components/blogs/WomanInBrothel";
+import ExtractsFromLoversNotebook from "./components/blogs/ExtractsFromLoversNotebook";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -25,6 +26,10 @@ function App() {
         <Route
           path="whats-calling-me-to-write?"
           element={<WhatsCallingMeToWrite />}
+        />
+        <Route
+          path="extracts-from-a-lovers-notebook"
+          element={<ExtractsFromLoversNotebook />}
         />
         <Route path="a-woman-in-brothel" element={<WomanInBrothel />} />
         <Route path="about" element={<About />} />
