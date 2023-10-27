@@ -37,6 +37,7 @@ export const Blogs = [
     img: Black,
     title: "A WOMAN IN BROTHEL.",
     text: "Reena was married to Rajesh when she was twenty-two. “Raena”, the only son, is 9..",
+    link: "/a-woman-in-brothel",
   },
   {
     id: 6,
