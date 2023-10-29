@@ -34,14 +34,6 @@ function Blog() {
               width: "100%",
             }}
           ></div>
-          <DesignB />
-          <div
-            style={{
-              height: "0.016rem",
-              backgroundColor: "#738a94",
-              width: "100%",
-            }}
-          ></div>
           <DesignD />
           <div
             style={{

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Byline from "../../postcardByline/Byline";
 
 function Postcard() {
-  const filteredBlogs = Blogs.filter((blog) => blog.id >= 3 && blog.id <= 5);
+  const filteredBlogs = Blogs.filter((blog) => blog.id >= 1 && blog.id <= 3);
 
   return (
     <>

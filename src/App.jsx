@@ -2,8 +2,6 @@ import Navbar from "./components/navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import DilliODilli from "./components/blogs/DilliODilli";
-import HowDoSomePeopleConsumeSoLittle from "./components/blogs/HowDoSomePeopleConsumeSoLittle";
-import WhatsCallingMeToWrite from "./components/blogs/WhatsCallingMeToWrite";
 import WomanInBrothel from "./components/blogs/WomanInBrothel";
 import ExtractsFromLoversNotebook from "./components/blogs/ExtractsFromLoversNotebook";
 import ThatsLife from "./components/blogs/ThatsLife";
@@ -21,14 +19,7 @@ function App() {
         <Route path="blog" element={<Blog />} />
 
         <Route path="dilli-o-dilli" element={<DilliODilli />} />
-        <Route
-          path="how-do-some-people-consume-so-little?"
-          element={<HowDoSomePeopleConsumeSoLittle />}
-        />
-        <Route
-          path="whats-calling-me-to-write?"
-          element={<WhatsCallingMeToWrite />}
-        />
+
         <Route
           path="extracts-from-a-lovers-notebook"
           element={<ExtractsFromLoversNotebook />}
