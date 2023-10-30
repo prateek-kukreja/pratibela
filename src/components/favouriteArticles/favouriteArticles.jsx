@@ -4,13 +4,13 @@ import DilliODilli from "../../images/blog/dilli/dilli-o-dilli.png";
 import { Link } from "react-router-dom";
 import DesignB from "../postcards/designB/DesignBPostcard";
 
-function PopularArticles() {
+function FavouriteArticles() {
   return (
     <>
-      <section className="popular-articles-section">
+      <section className="favourite-articles-section">
         <div className="container">
-          <div className="popular-articles-content">
-            <h1>popular articles</h1>
+          <div className="favourite-articles-content">
+            <h1>favourite articles</h1>
             <p>
               Read more posts &nbsp;
               <Link onClick={() => window.scrollTo(0, 0)} to="/blog">
@@ -26,7 +26,7 @@ function PopularArticles() {
             <DesignB />
             <div className="divider"></div>
             <div
-              className="popular-articles-content"
+              className="favourite-articles-content"
               style={{ marginTop: "12rem", marginBottom: "10rem" }}
             >
               <p>
@@ -43,4 +43,4 @@ function PopularArticles() {
   );
 }
 
-export default PopularArticles;
+export default FavouriteArticles;
