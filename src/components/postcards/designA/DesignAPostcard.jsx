@@ -16,7 +16,7 @@ function Postcard({ img, title, text }) {
             <h2>{title}</h2>
             <p>{text}</p>
           </Link>
-          <Byline />
+          <Byline date="9th September 2021" read="4 min read" />
         </div>
       </div>
     </>

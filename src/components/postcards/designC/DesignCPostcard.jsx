@@ -23,7 +23,7 @@ function Postcard() {
                 <p>{blog.text}</p>
               </div>
             </Link>
-            <Byline />
+            <Byline date={blog.date} read={blog.read} />
           </div>
         ))}
       </div>

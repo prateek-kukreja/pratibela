@@ -1,7 +1,7 @@
 import "./style.scss";
 import BylineImg from "../../images/byline/naman-byline.png";
 
-function Byline() {
+function Byline({ date, read }) {
   return (
     <div className="byline">
       <div className="byline__img">
@@ -10,8 +10,9 @@ function Byline() {
       <div className="byline__text">
         <p>naman rakheja</p>
         <p className="byline__date">
-          <time dateTime="2021-12-31">31 December 2021</time>
-          <span className="bull">•</span> 10 min read
+          <time>{date}</time>
+          <span className="bull">•</span>
+          {read}
         </p>
       </div>
     </div>

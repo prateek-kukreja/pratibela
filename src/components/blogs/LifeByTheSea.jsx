@@ -20,7 +20,7 @@ function Blog() {
               <p>naman rakheja</p>
               <p className="blogcontent-heading-byline__date">
                 <time dateTime="2021-12-31">PUBLISHED ON 18 August 2021</time>
-                <span className="bull">•</span> 5 min read
+                <span className="bull">•</span> 3 min read
               </p>
             </div>
           </div>

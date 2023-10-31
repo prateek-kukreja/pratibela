@@ -12,6 +12,8 @@ export const Blogs = [
     title: "That’s life",
     text: "I sit in the good daylight, and the pattern of the window panes reflect the lightest..",
     link: "/thats-life",
+    date: "2 August 2021",
+    read: "2 min read",
   },
   {
     id: 2,
@@ -19,6 +21,8 @@ export const Blogs = [
     title: "Life by the sea",
     text: "I wish I could live by the sea, or some days I wish I could just live in my apartment..",
     link: "/life-by-the-sea",
+    date: "18 August 2021",
+    read: "3 min read",
   },
   {
     id: 3,
@@ -26,6 +30,8 @@ export const Blogs = [
     title: "A WOMAN IN BROTHEL.",
     text: "Reena was married to Rajesh when she was twenty-two. “Raena”, the only son, is 9..",
     link: "/a-woman-in-brothel",
+    date: "29 August 2021",
+    read: "4 min read",
   },
   {
     id: 4,
@@ -33,5 +39,7 @@ export const Blogs = [
     title: "Extracts from a lover’s notebook",
     text: "My letter is as middle class as I am. I will try to talk about stars and moon and… ",
     link: "/extracts-from-a-lovers-notebook",
+    date: "23 September 2021",
+    read: "3 min read",
   },
 ];
