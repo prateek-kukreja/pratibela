@@ -10,7 +10,7 @@ function FavouriteArticles() {
       <section className="favourite-articles-section">
         <div className="container">
           <div className="favourite-articles-content">
-            <h1>favourite articles</h1>
+            <h1>favourites</h1>
             <p>
               Read more posts &nbsp;
               <Link onClick={() => window.scrollTo(0, 0)} to="/blog">
