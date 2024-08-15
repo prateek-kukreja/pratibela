@@ -22,18 +22,56 @@ nav {
 
   &__menu {
     display: flex;
-    gap: 2.25rem;
-    font-size: 1.2rem;
-    text-transform: uppercase;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 
-    li {
-      list-style: none;
+    ul {
+      display: flex;
+      gap: 2.25rem;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+
+      li {
+        list-style: none;
+
+        a {
+          position: relative;
+          color: #fff;
+          font-weight: 500;
+          text-decoration: none;
+
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: -0.25rem;
+            height: 0.1rem;
+            width: 0;
+            background-color: grey;
+            transition: all 0.35s ease-in-out;
+          }
+
+          &:hover:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &__auth {
+      display: flex;
+      align-items: center;
+      gap: 2.25rem;
+      font-size: 1.2rem;
 
       a {
-        position: relative;
+        display: flex;
+        align-items: center;
         color: #fff;
         font-weight: 500;
         text-decoration: none;
+        text-transform: uppercase;
+        position: relative;
 
         &:before {
           content: "";
@@ -47,6 +85,33 @@ nav {
 
         &:hover:before {
           width: 100%;
+        }
+
+        span {
+          font-size: 2rem;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &__user-actions {
+        display: flex;
+        gap: 0.4rem;
+
+        button {
+          padding: 0.8rem 1.6rem;
+          border: none;
+          border-radius: 0.6rem;
+          font-size: 1.2rem;
+          color: #fff;
+          background-color: #26a8ed;
+          cursor: pointer;
+
+          a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: 600;
+          }
         }
       }
     }

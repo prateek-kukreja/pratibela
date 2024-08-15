@@ -2,11 +2,11 @@ import "./style.scss";
 
 function Newsletter() {
   return (
-    <div class="newsletter">
-      <p class="newsletter__headline">
+    <div className="newsletter">
+      <p className="newsletter__headline">
         Learn about building products as a developer
       </p>
-      <p class="newsletter__subhead">
+      <p className="newsletter__subhead">
         Get a once-per-month email with my latest article and additional details
         about my launches, products, and experiments ✨
       </p>
@@ -14,7 +14,7 @@ function Newsletter() {
         <input type="text" placeholder="Your email address" />
         <button className="">Get Updates</button>
       </div>
-      <p class="newsletter__disclaimer">
+      <p className="newsletter__disclaimer">
         No spam, sales, or ads. Unsubscribe as your heart desires.
       </p>
     </div>
