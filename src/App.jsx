@@ -1,6 +1,7 @@
 import Navbar from "./components/navbar/Navbar";
 import { Routes, Route, Outlet } from "react-router-dom";
 import Home from "./pages/Home";
+import Blog from "./pages/Blog";
 import DilliODilli from "./components/blogs/DilliODilli";
 import WomanInBrothel from "./components/blogs/WomanInBrothel";
 import ExtractsFromLoversNotebook from "./components/blogs/ExtractsFromLoversNotebook";
@@ -48,6 +49,7 @@ function App() {
           }
         >
           <Route path="/" element={<Home />} />
+          {/* <Route path="/blog" element={<Blog />} /> */}
 
           <Route path="dilli-o-dilli" element={<DilliODilli />} />
 

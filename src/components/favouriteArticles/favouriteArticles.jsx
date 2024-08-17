@@ -3,6 +3,7 @@ import DesignA from "../postcards/designA/DesignAPostcard";
 import DilliODilli from "../../images/blog/dilli/dilli-o-dilli.png";
 import { Link } from "react-router-dom";
 import DesignB from "../postcards/designB/DesignBPostcard";
+import DesignD from "../postcards/designD/DesignDPostcard";
 
 function FavouriteArticles() {
   return (
@@ -13,7 +14,7 @@ function FavouriteArticles() {
             <h1>favourites</h1>
             <p>
               Read more posts &nbsp;
-              <Link onClick={() => window.scrollTo(0, 0)} to="/blog">
+              <Link onClick={() => window.scrollTo(0, 0)} to="/">
                 on the blog →
               </Link>
             </p>
@@ -25,6 +26,9 @@ function FavouriteArticles() {
             <div className="divider"></div>
             <DesignB />
             <div className="divider"></div>
+            <DesignD />
+            <div className="divider"></div>
+
             <div
               className="favourite-articles-content"
               style={{ marginTop: "12rem", marginBottom: "10rem" }}

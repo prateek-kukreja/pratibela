@@ -1,12 +1,15 @@
 import Footer from "../components/footer/Footer";
-import Hero from "../components/header/Hero";
+import Header from "../components/header/Header";
 import Newsletter from "../components/newsletter/Newsletter";
 import FavouriteArticles from "../components/favouriteArticles/favouriteArticles";
 
-function Home() {
+function Blog() {
+  const head = "Blog";
+  const desc = "Bringing you the best of today's writing";
+
   return (
     <>
-      <Hero />
+      <Header head={head} desc={desc} />
       <FavouriteArticles />
       <Newsletter />
       <Footer />
@@ -14,4 +17,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Blog;

@@ -7,10 +7,14 @@ import Footer from "../components/footer/Footer";
 import Postcard from "../article/postcard/Postcard";
 
 function Blog() {
+  const head = "Pratibela";
+  const desc =
+    "Welcome to your everyday blog, filled with content you'll love.";
+
   return (
     <>
       <section className="blog-section">
-        <Header />
+        <Header head={head} desc={desc} />
         <div className="container">
           <Postcard />
           {/* <DesignD />
