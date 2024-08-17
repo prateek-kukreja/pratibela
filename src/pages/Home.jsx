@@ -1,15 +1,19 @@
 import React from "react";
-import BlogHeader from "../components/header/BlogHeader";
+import Header from "../components/header/Header";
 import DesignB from "../components/postcards/designB/DesignBPostcard";
+import DesignD from "../components/postcards/designD/DesignDPostcard";
 import Newsletter from "../components/newsletter/Newsletter";
 import Footer from "../components/footer/Footer";
+import Postcard from "../article/postcard/Postcard";
 
 function Blog() {
   return (
     <>
       <section className="blog-section">
-        <BlogHeader />
+        <Header />
         <div className="container">
+          <Postcard />
+          {/* <DesignD />
           <DesignB />
           <div
             style={{
@@ -25,7 +29,7 @@ function Blog() {
               backgroundColor: "#738a94",
               width: "100%",
             }}
-          ></div>
+          ></div> */}
           <div style={{ marginBottom: "10rem" }}></div>
         </div>
         <Newsletter />

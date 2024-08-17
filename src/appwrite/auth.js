@@ -11,8 +11,8 @@ const createAccount = () => {
   try {
     account.createOAuth2Session(
       "google",
-      "http://localhost:5174/",
-      "http://localhost:5174/failed"
+      "http://localhost:5173/",
+      "http://localhost:5173/failed"
     );
   } catch (error) {
     console.error("appwrite service :: failed to create new account", error);

@@ -9,12 +9,36 @@ import LifeByTheSea from "./components/blogs/LifeByTheSea";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Signin from "./pages/auth/Signin";
+import Write from "./components/create-story/Write";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
 
 function App() {
+  const location = useLocation();
+  const userStatus = useSelector((state) => state.auth.status);
+  console.log(userStatus);
+
+  useEffect(() => {
+    if (
+      location.pathname === "/create-story" ||
+      location.pathname === "/signin"
+    ) {
+      document.body.classList.remove("padding-top");
+    } else {
+      document.body.classList.add("padding-top");
+    }
+  }, [location.pathname]);
+
   return (
     <>
       <Routes>
         <Route path="/signin" element={<Signin />} />
+        <Route
+          path="/create-story"
+          element={userStatus ? <Write /> : <Navigate to="/signin" />}
+        />
         <Route
           element={
             <>

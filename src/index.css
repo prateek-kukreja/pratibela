@@ -21,6 +21,9 @@ body {
   background-color: #191b1f;
   color: #ffff;
   font-family: "Poppins", sans-serif;
+}
+
+body.padding-top {
   padding-top: 60px;
 }
 
