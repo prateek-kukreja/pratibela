@@ -62,9 +62,9 @@ function NavBar() {
 
               <div className="pratibela-nav__menu__auth__user-actions">
                 {!user && (
-                  <button>
-                    <Link to="/signin">Login</Link>
-                  </button>
+                  <Link to="/signin">
+                    <button>Login</button>
+                  </Link>
                 )}
 
                 {user && (

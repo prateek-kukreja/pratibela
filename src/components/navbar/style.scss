@@ -98,6 +98,15 @@ nav {
         display: flex;
         gap: 0.4rem;
 
+        a {
+          text-decoration: none;
+          color: inherit;
+
+          &:hover:before {
+            content: none;
+          }
+        }
+
         button {
           padding: 0.8rem 1.6rem;
           border: none;
@@ -106,12 +115,7 @@ nav {
           color: #fff;
           background-color: #26a8ed;
           cursor: pointer;
-
-          a {
-            text-decoration: none;
-            color: inherit;
-            font-weight: 600;
-          }
+          font-weight: 600;
         }
       }
     }

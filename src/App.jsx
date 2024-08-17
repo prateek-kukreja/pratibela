@@ -17,7 +17,7 @@ import { Navigate } from "react-router-dom";
 
 function App() {
   const location = useLocation();
-  const userStatus = useSelector((state) => state.auth.status);
+  const userStatus = useSelector((state) => state.auth.userData);
   console.log(userStatus);
 
   useEffect(() => {

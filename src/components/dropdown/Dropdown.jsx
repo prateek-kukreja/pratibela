@@ -38,21 +38,25 @@ function Dropdown({ user_name }) {
                   <span className="user-name">{user_name}</span>
                 </div>
                 <div className="divider"></div>
-                <Link to="/write" onClick={window.scrollTo(0, 0)}>
-                  <div className="item">Write</div>
-                </Link>
+                <div className="item">
+                  <Link to="/create-story" onClick={window.scrollTo(0, 0)}>
+                    Write
+                  </Link>
+                </div>
                 <div className="divider"></div>
-                <Link to="/profile/">
-                  <div className="item">Profile</div>
-                </Link>
+
+                <div className="item">
+                  <Link to="/profile/">Profile</Link>
+                </div>
                 <div className="item_not-working">Stories</div>
                 <div className="item_not-working">Bookmark</div>
                 <div className="divider"></div>
                 <div className="item_not-working">Settings</div>
-
-                <Link to="/contact" onClick={window.scrollTo(0, 0)}>
-                  <div className="item">Help</div>
-                </Link>
+                <div className="item">
+                  <Link to="/contact" onClick={window.scrollTo(0, 0)}>
+                    Help
+                  </Link>
+                </div>
                 <div className="divider"></div>
                 <div
                   className="logout-button"

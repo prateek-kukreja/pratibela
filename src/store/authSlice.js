@@ -11,7 +11,6 @@ const getItemFromLocalStorage = (key) => {
 };
 
 const initialState = {
-  status: getItemFromLocalStorage("status") || false,
   userData: getItemFromLocalStorage("userData") || null,
 };
 
@@ -20,13 +19,11 @@ const authSlice = createSlice({
   initialState,
   reducers: {
     login: (state, action) => {
-      state.status = true;
       state.userData = action.payload.userData;
       localStorage.setItem("status", JSON.stringify(true));
       localStorage.setItem("userData", JSON.stringify(action.payload.userData));
     },
     logout: (state) => {
-      state.status = false;
       state.userData = null;
       localStorage.removeItem("status");
       localStorage.removeItem("userData");
