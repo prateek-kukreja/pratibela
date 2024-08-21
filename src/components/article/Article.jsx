@@ -1,4 +1,3 @@
-import "./style.scss";
 import BylineImg from "../../images/byline/naman-byline.png";
 import Img1 from "../../images/blog/dilli/dilli-o-dilli.png";
 import Img2 from "../../images/blog/dilli/lotus-temple.png";
@@ -9,21 +8,46 @@ import Img6 from "../../images/blog/dilli/moksh-street.png";
 import Img7 from "../../images/blog/dilli/dilli-haat.png";
 import Newsletter from "../newsletter/Newsletter";
 import Footer from "../footer/Footer";
+import { useParams } from "react-router-dom";
+import { getBlog } from "../../appwrite/database";
+import { useEffect, useState } from "react";
+import "./style.scss";
 
-function Blog() {
+function Article() {
+  const [blogPost, setBlogPost] = useState("");
+  const { id } = useParams();
+
+  useEffect(() => {
+    const fetchBlog = async () => {
+      try {
+        const blog = await getBlog(id);
+        const imageUrl = blog.imageId;
+        console.log("id", blog);
+        setBlogPost(blog);
+      } catch (error) {
+        console.error("error getting blog", error);
+      }
+    };
+    fetchBlog();
+  }, [id]);
+
+  if (!blogPost) {
+    return <p>No BlogPost Available</p>;
+  }
+
   return (
     <>
-      <section className="blogcontent-section">
-        <div className="blogcontent-heading">
-          <h1>Dilli-O-Dilli</h1>
-          <div className="blogcontent-heading-divider"></div>
-          <div className="blogcontent-heading-byline">
-            <div className="blogcontent-heading-byline__img">
+      <section className="article-section">
+        <div className="article-heading">
+          <h1>{blogPost.title}</h1>
+          <div className="article-heading-divider"></div>
+          <div className="article-heading-byline">
+            <div className="article-heading-byline__img">
               <img src={BylineImg} alt="" />
             </div>
-            <div className="blogcontent-heading-byline__text">
+            <div className="article-heading-byline__text">
               <p>naman rakheja</p>
-              <p className="blogcontent-heading-byline__date">
+              <p className="article-heading-byline__date">
                 <time dateTime="2021-12-31">
                   PUBLISHED ON 9TH SEPTEMBER 2021
                 </time>
@@ -32,11 +56,11 @@ function Blog() {
             </div>
           </div>
         </div>
-        <div className="blogcontent-big-image">
-          <img src={Img1} alt="" />
+        <div className="article-big-image">
+          <img src={blogPost.imageId} alt="" />
         </div>
         <div className="container">
-          <div className="blogcontent-text">
+          <div className="article-text">
             <p>“Dilli sheher ki baat hi kuch aur hai!”</p>
             <p>
               Delhi has always been portrayed very beautifully in cinema and
@@ -139,4 +163,4 @@ function Blog() {
   );
 }
 
-export default Blog;
+export default Article;

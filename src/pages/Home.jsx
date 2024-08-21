@@ -1,12 +1,10 @@
 import React from "react";
 import Header from "../components/header/Header";
-import DesignB from "../components/postcards/designB/DesignBPostcard";
-import DesignD from "../components/postcards/designD/DesignDPostcard";
 import Newsletter from "../components/newsletter/Newsletter";
 import Footer from "../components/footer/Footer";
-import Postcard from "../article/postcard/Postcard";
+import Postcard from "../components/article/postcard/Postcard";
 
-function Blog() {
+function Home() {
   const head = "Pratibela";
   const desc =
     "Welcome to your everyday blog, filled with content you'll love.";
@@ -43,4 +41,4 @@ function Blog() {
   );
 }
 
-export default Blog;
+export default Home;

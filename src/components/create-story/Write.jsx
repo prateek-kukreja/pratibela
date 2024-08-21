@@ -1,7 +1,8 @@
 import "./style.scss";
 import { createBlog } from "../../appwrite/database";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { createImageFile } from "../../appwrite/storage";
+import { getUser } from "../../appwrite/auth";
 
 const Write = () => {
   const [blogData, setBlogData] = useState({
@@ -9,6 +10,21 @@ const Write = () => {
     content: "",
     imageId: "",
   });
+
+  const [userId, setUserId] = useState("");
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const user = await getUser();
+        setUserId(user.$id);
+      } catch (error) {
+        console.error("Error fetching user", error);
+      }
+    };
+
+    fetchUser();
+  }, []);
 
   const handleInput = (e) => {
     let id = e.target.id;
@@ -41,7 +57,12 @@ const Write = () => {
     const { title, content, imageId } = blogData;
 
     try {
-      const createdBlog = await createBlog({ title, content, imageId });
+      const createdBlog = await createBlog({
+        title,
+        content,
+        imageId,
+        authorId: userId,
+      });
       console.log("response data", createdBlog);
     } catch (error) {
       console.error("Error creating blog", error);

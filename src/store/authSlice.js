@@ -20,12 +20,10 @@ const authSlice = createSlice({
   reducers: {
     login: (state, action) => {
       state.userData = action.payload.userData;
-      localStorage.setItem("status", JSON.stringify(true));
       localStorage.setItem("userData", JSON.stringify(action.payload.userData));
     },
     logout: (state) => {
       state.userData = null;
-      localStorage.removeItem("status");
       localStorage.removeItem("userData");
     },
   },

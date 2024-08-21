@@ -1,7 +1,7 @@
 import Navbar from "./components/navbar/Navbar";
 import { Routes, Route, Outlet } from "react-router-dom";
 import Home from "./pages/Home";
-import Blog from "./pages/Blog";
+import Article from "./components/article/Article";
 import DilliODilli from "./components/blogs/DilliODilli";
 import WomanInBrothel from "./components/blogs/WomanInBrothel";
 import ExtractsFromLoversNotebook from "./components/blogs/ExtractsFromLoversNotebook";
@@ -15,6 +15,8 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
+import Profile from "./pages/Profile";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const location = useLocation();
@@ -34,6 +36,7 @@ function App() {
 
   return (
     <>
+      <ToastContainer toastClassName="custom-toast" />
       <Routes>
         <Route path="/signin" element={<Signin />} />
         <Route
@@ -49,6 +52,9 @@ function App() {
           }
         >
           <Route path="/" element={<Home />} />
+          <Route path="blog/:id" element={<Article />} />
+          <Route path="profile/:id" element={<Profile />} />
+
           {/* <Route path="/blog" element={<Blog />} /> */}
 
           <Route path="dilli-o-dilli" element={<DilliODilli />} />

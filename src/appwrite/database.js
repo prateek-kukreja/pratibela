@@ -7,13 +7,13 @@ const client = new Client()
 
 const databases = new Databases(client);
 
-const createBlog = async ({ title, content, imageId }) => {
+const createBlog = async ({ title, content, imageId, authorId }) => {
   try {
     return await databases.createDocument(
       config.databaseID,
       config.collectionID,
       ID.unique(),
-      { title, content, imageId }
+      { title, content, imageId, authorId }
     );
   } catch (error) {
     console.error("appwrite service :: error in creating blog", error);
@@ -44,6 +44,19 @@ const listBlog = async () => {
     return response.documents;
   } catch (error) {
     console.error("appwrite service :: error in listing blogs:", error);
+  }
+};
+
+const listUserBlog = async (currentUserId) => {
+  try {
+    const response = await databases.listDocuments(
+      config.databaseID,
+      config.collectionID,
+      [Query.equal("authorId", currentUserId)]
+    );
+    return response.documents;
+  } catch (error) {
+    console.error("appwrite service :: error in listing user blogs:", error);
   }
 };
 
@@ -78,6 +91,7 @@ export {
   createBlog,
   getBlog,
   listBlog,
+  listUserBlog,
   updateBlog,
   deleteBlog,
 };

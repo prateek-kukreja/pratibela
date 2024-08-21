@@ -5,6 +5,9 @@ import { account } from "../../appwrite/auth.js";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/authSlice";
 import { Link } from "react-router-dom";
+import { Avatar, capitalize } from "@mui/material";
+import { useSelector } from "react-redux";
+import { deepPurple } from "@mui/material/colors";
 
 function Dropdown({ user_name }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,11 +25,21 @@ function Dropdown({ user_name }) {
     }
   };
 
+  const userProfile = useSelector((state) => state.user.userProfile);
+
   return (
     <>
       <div className="dropdown-section">
         <div className=" profile-dropdown" onClick={toggleDropdown}>
-          <div className="profile-image"></div>
+          {userProfile.img ? (
+            <Avatar src={userProfile.img} />
+          ) : (
+            <Avatar
+              sx={{ textTransform: "capitalize", bgcolor: deepPurple[500] }}
+            >
+              {userProfile.name[0]}
+            </Avatar>
+          )}
         </div>
 
         {isOpen && (
@@ -46,7 +59,7 @@ function Dropdown({ user_name }) {
                 <div className="divider"></div>
 
                 <div className="item">
-                  <Link to="/profile/">Profile</Link>
+                  <Link to="/profile">Profile</Link>
                 </div>
                 <div className="item_not-working">Stories</div>
                 <div className="item_not-working">Bookmark</div>

@@ -1,8 +1,8 @@
 import "./style.scss";
 import { Link } from "react-router-dom";
-import Byline from "../../components/postcardByline/Byline";
-import { listBlog } from "../../appwrite/database";
-import { getFile } from "../../appwrite/storage";
+import Byline from "../../postcardByline/Byline";
+import { listBlog } from "../../../appwrite/database";
+import { getFile } from "../../../appwrite/storage";
 import { useEffect, useState } from "react";
 
 function Postcard() {
@@ -35,7 +35,10 @@ function Postcard() {
         {blogs.length > 0 ? (
           blogs.map((blog) => (
             <div key={blog.$id} className="postcard-b-content">
-              <Link onClick={() => window.scrollTo(0, 0)} to={"/"}>
+              <Link
+                onClick={() => window.scrollTo(0, 0)}
+                to={`/blog/${blog.$id}`}
+              >
                 <div className="postcard-b-content__img">
                   <img src={blog.imageUrl} alt={blog.title} />
                 </div>

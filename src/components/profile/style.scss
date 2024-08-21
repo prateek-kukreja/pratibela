@@ -1,0 +1,99 @@
+.hero-section {
+  background-color: #090a0b;
+  color: #ffff;
+  position: relative;
+}
+
+.pratibela-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8rem;
+
+  @media (max-width: 450px) {
+    padding: 4rem;
+  }
+
+  &__img {
+    padding-bottom: 2rem;
+  }
+
+  &__text {
+    text-align: center;
+    padding-bottom: 2rem;
+
+    span {
+      font-size: 5.2rem;
+      font-family: "Open Sans", sans-serif;
+      text-transform: capitalize;
+
+      @media (max-width: 450px) {
+        font-size: 3.8rem;
+        line-height: 1;
+      }
+    }
+
+    p {
+      font-size: 2rem;
+      color: #c4c4c5;
+      font-family: "Raleway", sans-serif;
+
+      @media (max-width: 450px) {
+        font-size: 1.8rem;
+        line-height: 1;
+        padding-top: 1.2rem;
+      }
+    }
+  }
+
+  &__edit-profile {
+    margin-top: 2rem;
+
+    button {
+      padding: 1rem 1.6rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+      border: none;
+      border-radius: 9999px;
+      background-color: #ff3975;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+  }
+}
+
+// @keyframes morph {
+//   0% {
+//     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+//   }
+
+//   50% {
+//     border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+//   }
+
+//   100% {
+//     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+//   }
+// }
+
+// .avatar {
+//   font-size: 5rem;
+//   animation: morph 8s ease-in-out infinite;
+//   background-position: 50%;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   border: 3px solid #2d2e32;
+//   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+//   transition: all 1s ease-in-out;
+//   width: 22rem;
+//   margin-bottom: 2rem;
+//   background-color: grey;
+
+//   @media (max-width: 450px) {
+//     width: 20rem;
+//   }
+// }

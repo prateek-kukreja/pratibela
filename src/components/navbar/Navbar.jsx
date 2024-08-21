@@ -34,8 +34,11 @@ function NavBar() {
           <div className="pratibela-nav__menu">
             <ul>
               <li>
-                <Link onClick={() => window.scrollTo(0, 0)} to="/blog">
-                  blog
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to={`/profile/${user.$id}`}
+                >
+                  profile
                 </Link>
               </li>
               <li>
