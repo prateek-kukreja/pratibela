@@ -72,7 +72,7 @@ function NavBar() {
 
                 {user && (
                   <>
-                    <Dropdown user_name={user.name} />
+                    <Dropdown user={user} />
                   </>
                 )}
               </div>

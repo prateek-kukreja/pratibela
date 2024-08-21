@@ -9,7 +9,7 @@ import { Avatar, capitalize } from "@mui/material";
 import { useSelector } from "react-redux";
 import { deepPurple } from "@mui/material/colors";
 
-function Dropdown({ user_name }) {
+function Dropdown({ user }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -48,7 +48,7 @@ function Dropdown({ user_name }) {
               <div className="dropdown-items">
                 <div className="item_not-working">
                   Signed in as <br />
-                  <span className="user-name">{user_name}</span>
+                  <span className="user-name">{user.name}</span>
                 </div>
                 <div className="divider"></div>
                 <div className="item">
@@ -59,7 +59,7 @@ function Dropdown({ user_name }) {
                 <div className="divider"></div>
 
                 <div className="item">
-                  <Link to="/profile">Profile</Link>
+                  <Link to={`/profile/${user.$id}`}>Profile`</Link>
                 </div>
                 <div className="item_not-working">Stories</div>
                 <div className="item_not-working">Bookmark</div>
