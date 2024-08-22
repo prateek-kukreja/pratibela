@@ -4,13 +4,11 @@ import { MdOutlineModeEdit } from "react-icons/md";
 import Model from "./model/Model";
 import { useSelector } from "react-redux";
 import { Avatar } from "@mui/material";
-import Naman from "../../images/profile/naman_blog.png";
 import { deepPurple } from "@mui/material/colors";
 
 function Hero() {
   const [modal, setModal] = useState(false);
 
-  const userData = useSelector((state) => state.auth.userData);
   const userProfile = useSelector((state) => state.user.userProfile);
 
   const toggleModal = () => {
@@ -25,7 +23,7 @@ function Hero() {
             <div className="pratibela-hero-content__img">
               {userProfile.img ? (
                 <Avatar
-                  src={userProfile.img}
+                  src={userProfile.imgUrl}
                   sx={{ width: 300, height: 200 }}
                 />
               ) : (
@@ -39,19 +37,18 @@ function Hero() {
                     bgcolor: deepPurple[500],
                   }}
                 >
-                  {userProfile.name[0]}
+                  {userProfile.name ? userProfile.name[0] : user.name[0]}
                 </Avatar>
               )}
             </div>
             <div className="pratibela-hero-content__text">
               <span>
-                Hi, I'm{" "}
-                {userProfile.name === "" ? userData.name : userProfile.name}
+                Hi, I'm {userProfile.name ? userProfile.name : user.name}
               </span>
               <p>
-                {userProfile.bio === ""
-                  ? "You will see your bio here"
-                  : userProfile.bio}
+                {userProfile.bio
+                  ? userProfile.bio
+                  : "You will see your bio here"}
               </p>
             </div>
             <div className="pratibela-hero-content__edit-profile">

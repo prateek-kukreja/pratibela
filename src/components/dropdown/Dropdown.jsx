@@ -5,7 +5,7 @@ import { account } from "../../appwrite/auth.js";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/authSlice";
 import { Link } from "react-router-dom";
-import { Avatar, capitalize } from "@mui/material";
+import { Avatar } from "@mui/material";
 import { useSelector } from "react-redux";
 import { deepPurple } from "@mui/material/colors";
 
@@ -37,7 +37,7 @@ function Dropdown({ user }) {
             <Avatar
               sx={{ textTransform: "capitalize", bgcolor: deepPurple[500] }}
             >
-              {userProfile.name[0]}
+              {userProfile.name ? userProfile.name[0] : user.name[0]}
             </Avatar>
           )}
         </div>
@@ -58,9 +58,11 @@ function Dropdown({ user }) {
                 </div>
                 <div className="divider"></div>
 
-                <div className="item">
-                  <Link to={`/profile/${user.$id}`}>Profile`</Link>
-                </div>
+                {user && (
+                  <div className="item">
+                    <Link to={`/profile/${user.$id}`}>Profile`</Link>
+                  </div>
+                )}
                 <div className="item_not-working">Stories</div>
                 <div className="item_not-working">Bookmark</div>
                 <div className="divider"></div>

@@ -36,7 +36,7 @@ function NavBar() {
               <li>
                 <Link
                   onClick={() => window.scrollTo(0, 0)}
-                  to={`/profile/${user.$id}`}
+                  to={user ? `/profile/${user.$id}` : "/signin"}
                 >
                   profile
                 </Link>
