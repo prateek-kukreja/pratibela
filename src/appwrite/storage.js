@@ -21,9 +21,9 @@ const createImageFile = async (file) => {
   }
 };
 
-const getFile = (fileId) => {
+const getFile = (fileUrl) => {
   try {
-    const response = storage.getFileView(config.bucketID, fileId);
+    const response = storage.getFileView(config.bucketID, fileUrl);
     return response;
   } catch (error) {
     console.error("appwrite service :: error in getting files", error);

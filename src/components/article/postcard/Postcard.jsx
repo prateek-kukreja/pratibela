@@ -12,6 +12,7 @@ function Postcard() {
     const fetchBlogs = async () => {
       try {
         const blogData = await listBlog();
+        console.log(blogData);
 
         // Fetch image URLs for each blog ( This ensures all image URLs are fetched before setting the state. )
         const blogsWithImages = await Promise.all(
@@ -29,6 +30,22 @@ function Postcard() {
     fetchBlogs();
   }, []);
 
+  // Function to extract text from content JSON
+  const extractTextFromContent = (content) => {
+    if (!content) return "";
+
+    const parsedContent = JSON.parse(content);
+    let text = "";
+
+    parsedContent.blocks.forEach((block) => {
+      if (block.type === "paragraph" || block.type === "header") {
+        text = text + block.data.text + " ";
+      }
+    });
+
+    return text.substring(0, 100);
+  };
+
   return (
     <>
       <div className="postcard-b-section">
@@ -44,14 +61,14 @@ function Postcard() {
                 </div>
                 <div className="postcard-b-content__text">
                   <h2>{blog.title}</h2>
-                  <p>{blog.content?.substring(0, 200)}...</p>
+                  <p>{extractTextFromContent(blog.content)}...</p>
                 </div>
               </Link>
               <Byline date={blog.date} read={blog.read} />
             </div>
           ))
         ) : (
-          <p>No blogs available. </p>
+          <p>No blogs available.</p>
         )}
       </div>
     </>

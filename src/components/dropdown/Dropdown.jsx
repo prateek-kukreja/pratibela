@@ -9,7 +9,7 @@ import { Avatar } from "@mui/material";
 import { useSelector } from "react-redux";
 import { deepPurple } from "@mui/material/colors";
 
-function Dropdown({ user }) {
+function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -26,6 +26,8 @@ function Dropdown({ user }) {
   };
 
   const userProfile = useSelector((state) => state.user.userProfile);
+
+  const user = useSelector((state) => state.auth.userData);
 
   return (
     <>

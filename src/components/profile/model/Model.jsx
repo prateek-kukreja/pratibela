@@ -1,6 +1,6 @@
 import { LiaTimesSolid } from "react-icons/lia";
 import "./style.scss";
-import { createImageFile } from "../../../appwrite/storage";
+import { createImageFile } from "../../../appwrite/storage.js";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
