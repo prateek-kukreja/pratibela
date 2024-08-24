@@ -15,26 +15,7 @@ function Home() {
         <Header head={head} desc={desc} />
         <div className="container">
           <Postcard />
-          {/* <DesignD />
-          <DesignB />
-          <div
-            style={{
-              height: "0.016rem",
-              backgroundColor: "#738a94",
-              width: "100%",
-            }}
-          ></div>
-          <DesignB />
-          <div
-            style={{
-              height: "0.016rem",
-              backgroundColor: "#738a94",
-              width: "100%",
-            }}
-          ></div> */}
-          <div style={{ marginBottom: "10rem" }}></div>
         </div>
-        <Newsletter />
         <Footer />
       </section>
     </>

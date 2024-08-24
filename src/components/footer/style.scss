@@ -1,15 +1,13 @@
 .pratibela-footer {
-  padding-top: 20px;
-  padding-bottom: 60px;
   color: rgba(255, 255, 255, 0.7);
   background: #090a0b;
 }
 
 .pratibela-footer-content {
+  height: 10vh;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
@@ -36,21 +34,6 @@
 
     &:first-of-type:before {
       display: none;
-    }
-  }
-}
-
-.pratibela-footer__website-creator {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-top: 2rem;
-
-  a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.7);
-
-    &:hover {
-      color: #fff;
     }
   }
 }
