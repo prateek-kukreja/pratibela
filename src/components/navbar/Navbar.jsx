@@ -1,7 +1,7 @@
 import "./style.scss";
 import { Link } from "react-router-dom";
 import { getUser } from "../../appwrite/auth.js";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../store/authSlice.js";
 import { HiOutlinePencilSquare } from "react-icons/hi2";
@@ -31,8 +31,9 @@ function NavBar() {
               Pratibela
             </Link>
           </div>
+
           <div className="pratibela-nav__menu">
-            <ul>
+            <ul className="menu-links">
               <li>
                 <Link
                   onClick={() => window.scrollTo(0, 0)}
@@ -53,17 +54,15 @@ function NavBar() {
               </li>
             </ul>
 
-            <div className="pratibela-nav__menu__auth">
-              <div>
-                <Link onClick={() => window.scrollTo(0, 0)} to="/create-story">
-                  <span>
-                    <HiOutlinePencilSquare />
-                  </span>
-                  Write
-                </Link>
-              </div>
+            <div className="menu-auth">
+              <Link onClick={() => window.scrollTo(0, 0)} to="/create-story">
+                <span>
+                  <HiOutlinePencilSquare />
+                </span>
+                Write
+              </Link>
 
-              <div className="pratibela-nav__menu__auth__user-actions">
+              <div className="menu-auth__user-actions">
                 {!user && (
                   <Link to="/signin">
                     <button>Login</button>

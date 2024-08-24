@@ -32,12 +32,17 @@ function Dropdown() {
   return (
     <>
       <div className="dropdown-section">
-        <div className=" profile-dropdown" onClick={toggleDropdown}>
+        <div className=" profile-image" onClick={toggleDropdown}>
           {userProfile.img ? (
-            <Avatar src={userProfile.img} />
+            <Avatar sx={{}} src={userProfile.img} />
           ) : (
             <Avatar
-              sx={{ textTransform: "capitalize", bgcolor: deepPurple[500] }}
+              sx={{
+                textTransform: "capitalize",
+                bgColor: deepPurple[500],
+                width: 33,
+                height: 33,
+              }}
             >
               {userProfile.name ? userProfile.name[0] : user.name[0]}
             </Avatar>
@@ -62,7 +67,7 @@ function Dropdown() {
 
                 {user && (
                   <div className="item">
-                    <Link to={`/profile/${user.$id}`}>Profile`</Link>
+                    <Link to={`/profile/${user.$id}`}>Profile</Link>
                   </div>
                 )}
                 <div className="item_not-working">Stories</div>

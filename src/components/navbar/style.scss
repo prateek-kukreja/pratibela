@@ -13,111 +13,123 @@ nav {
   align-items: center;
   gap: 3rem;
 
-  &__logo a {
-    text-decoration: none;
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #ffff;
-  }
-
-  &__menu {
-    display: flex;
-    align-items: center;
+  @media (max-width: 450px) {
     justify-content: space-between;
-    width: 100%;
-
-    ul {
-      display: flex;
-      gap: 2.25rem;
-      font-size: 1.2rem;
-      text-transform: uppercase;
-
-      li {
-        list-style: none;
-
-        a {
-          position: relative;
-          color: #fff;
-          font-weight: 500;
-          text-decoration: none;
-
-          &:before {
-            content: "";
-            position: absolute;
-            bottom: -0.25rem;
-            height: 0.1rem;
-            width: 0;
-            background-color: grey;
-            transition: all 0.35s ease-in-out;
-          }
-
-          &:hover:before {
-            width: 100%;
-          }
-        }
-      }
-    }
-
-    &__auth {
-      display: flex;
-      align-items: center;
-      gap: 2.25rem;
-      font-size: 1.2rem;
-
-      a {
-        display: flex;
-        align-items: center;
-        color: #fff;
-        font-weight: 500;
-        text-decoration: none;
-        text-transform: uppercase;
-        position: relative;
-
-        &:before {
-          content: "";
-          position: absolute;
-          bottom: -0.25rem;
-          height: 0.1rem;
-          width: 0;
-          background-color: grey;
-          transition: all 0.35s ease-in-out;
-        }
-
-        &:hover:before {
-          width: 100%;
-        }
-
-        span {
-          font-size: 2rem;
-          display: flex;
-          align-items: center;
-        }
-      }
-
-      &__user-actions {
-        display: flex;
-        gap: 0.4rem;
-
-        a {
-          text-decoration: none;
-          color: inherit;
-
-          &:hover:before {
-            content: none;
-          }
-        }
-
-        button {
-          padding: 0.8rem 1.6rem;
-          border: none;
-          border-radius: 0.6rem;
-          font-size: 1.2rem;
-          color: #fff;
-          background-color: #26a8ed;
-          cursor: pointer;
-          font-weight: 600;
-        }
-      }
-    }
   }
+}
+
+.pratibela-nav__logo a {
+  text-decoration: none;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #ffff;
+}
+
+.pratibela-nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 450px) {
+    justify-content: end;
+  }
+}
+
+.pratibela-nav__menu ul {
+  display: flex;
+  gap: 2.25rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+
+  @media (max-width: 450px) {
+    display: none;
+  }
+}
+
+.pratibela-nav__menu li {
+  list-style: none;
+}
+
+.pratibela-nav__menu li a {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -0.25rem;
+    height: 0.1rem;
+    width: 0;
+    background-color: grey;
+    transition: all 0.35s ease-in-out;
+  }
+
+  &:hover:before {
+    width: 100%;
+  }
+}
+
+.menu-auth {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+  font-size: 1.2rem;
+}
+
+.menu-auth a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -0.25rem;
+    height: 0.1rem;
+    width: 0;
+    background-color: grey;
+    transition: all 0.35s ease-in-out;
+  }
+
+  &:hover:before {
+    width: 100%;
+  }
+}
+
+.menu-auth span {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.menu-auth__user-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.menu-auth__user-actions a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover:before {
+    content: none;
+  }
+}
+
+.menu-auth__user-actions button {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 0.6rem;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #26a8ed;
+  cursor: pointer;
+  font-weight: 600;
 }
