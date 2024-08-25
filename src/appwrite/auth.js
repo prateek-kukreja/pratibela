@@ -11,7 +11,7 @@ const createAccount = () => {
   try {
     account.createOAuth2Session(
       "google",
-      "http://localhost:5173/",
+      "https://pratibela.vercel.app/",
       "http://localhost:5173/failed"
     );
   } catch (error) {
