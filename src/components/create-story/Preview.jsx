@@ -2,16 +2,21 @@ import "./style.scss";
 import { useRef, useState } from "react";
 import { LiaTimesSolid } from "react-icons/lia";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { createBlog } from "../../appwrite/database";
 import { createImageFile } from "../../appwrite/storage";
+import { useSelector } from "react-redux";
 
 function Preview({ togglePreview, title, content }) {
+  const author = useSelector((state) => state.auth.userData);
+
   const imgRef = useRef();
   const [previewBlog, setPreviewBlog] = useState({
     imageFile: "",
     title: title,
     content: content,
+    authorId: author.$id,
+    authorName: author.name,
   });
 
   const openFile = () => {
@@ -22,7 +27,6 @@ function Preview({ togglePreview, title, content }) {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    console.log(file);
 
     if (file) {
       const imageUrl = URL.createObjectURL(file);
@@ -44,27 +48,24 @@ function Preview({ togglePreview, title, content }) {
     }));
   };
 
-  const checkContent = () => {
-    const { content } = previewBlog;
-    // JSON.stringify(content);
-    console.log(content);
-  };
-
   const navigate = useNavigate();
   const publish = async () => {
     if (previewBlog.imageUrl === "" || previewBlog.title === "") {
       return toast.error("All items are required!");
     }
 
-    const { imageFile, title, content } = previewBlog;
+    const { imageFile, title, content, authorId, authorName } = previewBlog;
 
     try {
       const createImage = await createImageFile(imageFile);
-      console.log("successfully created", createImage);
-
       const imageId = createImage.$id;
-      console.log("imageId", imageId);
-      const createdBlog = await createBlog({ imageId, title, content });
+      const createdBlog = await createBlog({
+        imageId,
+        title,
+        content,
+        authorId,
+        authorName,
+      });
       console.log("response data", createdBlog);
     } catch (error) {
       console.error("Error creating blog", error);
@@ -111,9 +112,10 @@ function Preview({ togglePreview, title, content }) {
           </div>
           <div className="preview-note">
             <p>
-              Note: Changes here will affect how your story appears in public
-              places like Medium’s homepage and in subscribers’ inboxes — not
-              the contents of the story itself.
+              Note: Any changes you make here will affect how your story is
+              showcased on Pratibela’s homepage and other public areas. Rest
+              assured, these changes will not impact the content of your story
+              itself.
             </p>
           </div>
           <div className="preview-button">

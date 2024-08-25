@@ -1,6 +1,5 @@
 import React from "react";
-import Header from "../components/header/Header";
-import Newsletter from "../components/newsletter/Newsletter";
+import Header from "../components/header/Hero";
 import Footer from "../components/footer/Footer";
 import Postcard from "../components/article/postcard/Postcard";
 
@@ -11,7 +10,7 @@ function Home() {
 
   return (
     <>
-      <section className="blog-section">
+      <section className="Home-section">
         <Header head={head} desc={desc} />
         <div className="container">
           <Postcard />

@@ -9,13 +9,14 @@ import Dropdown from "../dropdown/Dropdown.jsx";
 
 function NavBar() {
   const dispatch = useDispatch();
+
   const user = useSelector((state) => state.auth.userData);
 
   useEffect(() => {
     const getCurrentUser = async () => {
       try {
         const userData = await getUser();
-        console.log(dispatch(login({ userData })));
+        dispatch(login({ userData }));
       } catch (error) {
         console.error("error get userData", error);
       }

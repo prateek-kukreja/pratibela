@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 .byline {
   display: flex;
   gap: 1rem;
@@ -14,7 +16,7 @@
     text-align: left;
     text-transform: uppercase;
     font-size: 1.2rem;
-    color: #738a94;
+    color: $text-color;
     margin-bottom: 0;
     font-family: "Poppins", sans-serif;
   }

@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
+
+@import "../../index.scss";
+
 nav {
-  background-color: #090a0b;
-  color: #ffff;
+  background-color: $secondary-color;
   position: fixed;
   top: 0;
   width: 100%;
@@ -22,7 +25,8 @@ nav {
   text-decoration: none;
   font-size: 2.2rem;
   font-weight: 600;
-  color: #ffff;
+  color: $text-color;
+  font-family: "DM Serif Text", serif;
 }
 
 .pratibela-nav__menu {
@@ -53,7 +57,7 @@ nav {
 
 .pratibela-nav__menu li a {
   position: relative;
-  color: #fff;
+  color: $text-color;
   font-weight: 500;
   text-decoration: none;
 
@@ -63,7 +67,7 @@ nav {
     bottom: -0.25rem;
     height: 0.1rem;
     width: 0;
-    background-color: grey;
+    background-color: $grey-color;
     transition: all 0.35s ease-in-out;
   }
 
@@ -82,7 +86,7 @@ nav {
 .menu-auth a {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: $text-color;
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
@@ -94,7 +98,7 @@ nav {
     bottom: -0.25rem;
     height: 0.1rem;
     width: 0;
-    background-color: grey;
+    background-color: $grey-color;
     transition: all 0.35s ease-in-out;
   }
 
@@ -128,8 +132,8 @@ nav {
   border: none;
   border-radius: 0.6rem;
   font-size: 1.2rem;
-  color: #fff;
-  background-color: #26a8ed;
+  color: $primary-color;
+  background-color: $button-color;
   cursor: pointer;
   font-weight: 600;
   text-transform: uppercase;

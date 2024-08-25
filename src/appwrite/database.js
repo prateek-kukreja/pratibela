@@ -7,13 +7,19 @@ const client = new Client()
 
 const databases = new Databases(client);
 
-const createBlog = async ({ imageId, title, content, authorId }) => {
+const createBlog = async ({
+  imageId,
+  title,
+  content,
+  authorId,
+  authorName,
+}) => {
   try {
     return await databases.createDocument(
       config.databaseID,
       config.collectionID,
       ID.unique(),
-      { imageId, title, content, authorId }
+      { imageId, title, content, authorId, authorName }
     );
   } catch (error) {
     console.error("appwrite service :: error in creating blog", error);

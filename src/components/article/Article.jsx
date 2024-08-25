@@ -48,10 +48,11 @@ function Article() {
             <div className="article-heading-byline__text">
               <p>naman rakheja</p>
               <p className="article-heading-byline__date">
-                {/* <time dateTime={new Date(blogPost.date).toISOString()}>
-                  PUBLISHED ON {new Date(blogPost.date).toLocaleDateString()}
-                </time> */}
-                <span className="bull">•</span> 4 min read
+                <time>
+                  PUBLISHED ON{" "}
+                  {new Date(blogPost.$createdAt).toLocaleDateString()}
+                </time>
+                <span className="bull">•</span> 5 min read
               </p>
             </div>
           </div>

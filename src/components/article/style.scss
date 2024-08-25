@@ -1,3 +1,5 @@
+@import "../../index.scss";
+
 .article-section {
   padding: 4rem 0;
 
@@ -32,7 +34,7 @@
 
 .article-heading-divider {
   height: 0.016rem;
-  background-color: #738a94;
+  background-color: $divider-color;
   width: 100%;
 }
 
@@ -55,7 +57,7 @@
       text-align: left;
       text-transform: uppercase;
       font-size: 1.3rem;
-      color: #738a94;
+      color: $text-color;
 
       @media (max-width: 450px) {
         font-size: 1rem;

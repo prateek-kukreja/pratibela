@@ -48,7 +48,7 @@ function Postcard() {
                 </p>
               </div>
             </Link>
-            <Byline date={blog.date} read={blog.read} />
+            <Byline date={blog.$createdAt} author_name={blog.authorName} />
           </div>
         ))
       ) : (

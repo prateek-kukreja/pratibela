@@ -1,18 +1,17 @@
 import "./style.scss";
 import BylineImg from "../../images/byline/naman-byline.png";
 
-function Byline({ date, read }) {
+function Byline({ date, author_name }) {
   return (
     <div className="byline">
       <div className="byline__img">
-        <img src={BylineImg} alt="naman" />
+        <img src={BylineImg} alt="" />
       </div>
       <div className="byline__text">
-        <p>naman rakheja</p>
+        <p>{author_name}</p>
         <p className="byline__date">
-          <time>{date}</time>
-          <span className="bull">•</span>
-          {read}
+          <time>{new Date(date).toLocaleDateString()}</time>
+          <span className="bull">•</span>5 min read
         </p>
       </div>
     </div>

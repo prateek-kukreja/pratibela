@@ -1,3 +1,5 @@
+@import "../../../index.scss";
+
 .postcard-b-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -33,7 +35,7 @@
       text-transform: capitalize;
       margin: 0.8rem 0;
       font-family: "Open Sans", sans-serif;
-      color: #ffff;
+      color: $text-color;
 
       @media (max-width: 800px) {
         font-size: 2.2rem;
@@ -44,7 +46,7 @@
       text-align: left;
       font-size: 1.6rem;
       margin-bottom: 2rem;
-      color: #829fab;
+      color: $text-color;
       font-family: "Raleway", sans-serif;
 
       @media (max-width: 800px) {

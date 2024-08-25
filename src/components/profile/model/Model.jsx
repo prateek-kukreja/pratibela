@@ -38,8 +38,6 @@ function Model({ toggleModal, userProfile }) {
         img: imageUrl,
       }));
     }
-
-    console.log(form.img);
   };
 
   const removeImage = () => {

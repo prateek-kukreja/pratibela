@@ -7,7 +7,6 @@ import { logout } from "../../store/authSlice";
 import { Link } from "react-router-dom";
 import { Avatar } from "@mui/material";
 import { useSelector } from "react-redux";
-import { deepPurple } from "@mui/material/colors";
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,14 +33,15 @@ function Dropdown() {
       <div className="dropdown-section">
         <div className=" profile-image" onClick={toggleDropdown}>
           {userProfile.img ? (
-            <Avatar sx={{}} src={userProfile.img} />
+            <Avatar src={userProfile.img} />
           ) : (
             <Avatar
               sx={{
+                bgcolor: "grey",
                 textTransform: "capitalize",
-                bgColor: deepPurple[500],
                 width: 33,
                 height: 33,
+                cursor: "pointer",
               }}
             >
               {userProfile.name ? userProfile.name[0] : user.name[0]}
@@ -51,11 +51,12 @@ function Dropdown() {
 
         {isOpen && (
           <div className="dropdown-container">
+            <div className="dropdown-wrapper" onClick={toggleDropdown}></div>
             <div className="dropdown">
               <div className="dropdown-items">
                 <div className="item_not-working">
                   Signed in as <br />
-                  <span className="user-name">{user.name}</span>
+                  <span className="user-name">{user.email}</span>
                 </div>
                 <div className="divider"></div>
                 <div className="item">

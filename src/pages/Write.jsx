@@ -1,7 +1,6 @@
 import "../styles/Write.scss";
 import EditorJS from "@editorjs/editorjs";
 import Header from "@editorjs/header";
-import List from "@editorjs/list";
 import { Link } from "react-router-dom";
 import Dropdown from "../components/dropdown/Dropdown";
 import Preview from "../components/create-story/Preview";
@@ -41,13 +40,6 @@ function Write() {
           config: {
             levels: [2, 3, 4],
             defaultLevel: 3,
-          },
-        },
-        list: {
-          class: List,
-          inlineToolbar: true,
-          config: {
-            defaultStyle: "unordered",
           },
         },
       },

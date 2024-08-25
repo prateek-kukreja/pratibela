@@ -4,9 +4,8 @@ import { MdOutlineModeEdit } from "react-icons/md";
 import Model from "./model/Model";
 import { useSelector } from "react-redux";
 import { Avatar } from "@mui/material";
-import { deepPurple } from "@mui/material/colors";
 
-function Hero() {
+function Profile() {
   const [modal, setModal] = useState(false);
 
   const userProfile = useSelector((state) => state.user.userProfile);
@@ -17,31 +16,31 @@ function Hero() {
 
   return (
     <>
-      <section className="hero-section">
+      <section className="profile-header-section">
         <div className="container">
-          <div className="pratibela-hero-content">
-            <div className="pratibela-hero-content__img">
+          <div className="profile-header-content">
+            <div className="profile-header-content__img">
               {userProfile.img ? (
                 <Avatar
-                  src={userProfile.imgUrl}
-                  sx={{ width: 300, height: 200 }}
+                  src={userProfile.img}
+                  sx={{ width: 250, height: 250 }}
                 />
               ) : (
                 <Avatar
                   sx={{
                     bgcolor: "grey",
-                    width: 200,
-                    height: 200,
-                    fontSize: "8rem",
                     textTransform: "capitalize",
-                    bgcolor: deepPurple[500],
+                    cursor: "pointer",
+                    width: 250,
+                    height: 250,
+                    fontSize: "100px",
                   }}
                 >
                   {userProfile.name ? userProfile.name[0] : user.name[0]}
                 </Avatar>
               )}
             </div>
-            <div className="pratibela-hero-content__text">
+            <div className="profile-header-content__text">
               <span>
                 Hi, I'm {userProfile.name ? userProfile.name : user.name}
               </span>
@@ -51,7 +50,7 @@ function Hero() {
                   : "You will see your bio here"}
               </p>
             </div>
-            <div className="pratibela-hero-content__edit-profile">
+            <div className="profile-header-content__edit-profile">
               <button onClick={toggleModal}>
                 <span>
                   <MdOutlineModeEdit />
@@ -70,4 +69,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default Profile;

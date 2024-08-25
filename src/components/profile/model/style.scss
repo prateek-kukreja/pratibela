@@ -1,3 +1,5 @@
+@import "../../../index.scss";
+
 .modal-wrapper {
   top: 0;
   left: 0;
@@ -12,8 +14,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #fff;
-  color: #090a0b;
+  background: $primary-color;
+  color: $text-color;
   padding: 14px 28px;
   border-radius: 3px;
 
@@ -46,7 +48,7 @@
 
       .photo-section {
         font-size: 1.4rem;
-        color: #6b7280;
+        color: $grey-color;
         margin-bottom: 1rem;
       }
 
@@ -63,7 +65,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 9999px;
-            border: 1px solid #d1d5db;
+            border: 1px solid $grey-color;
             display: inline-block;
           }
         }
@@ -84,11 +86,11 @@
               padding: 0;
 
               &.update {
-                color: #10b981;
+                color: $green-color;
               }
 
               &.remove {
-                color: #ef4444;
+                color: $red-color;
               }
             }
           }
@@ -96,7 +98,7 @@
           .photo-note {
             margin-top: 1.4rem;
             font-size: 1.4rem;
-            color: #6b7280;
+            color: $grey-color;
           }
         }
       }
@@ -118,15 +120,16 @@
         width: 100%;
         padding: 0.5rem;
         border: none;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid $text-color;
         outline: none;
         font-size: 1.4rem;
         margin-bottom: 0.5rem;
+        background-color: $primary-color;
       }
 
       .input-note {
         font-size: 1.4rem;
-        color: #6b7280;
+        color: $grey-color;
       }
     }
 
@@ -143,15 +146,15 @@
         cursor: pointer;
 
         &.cancel {
-          color: #036635;
-          background-color: white;
-          border: 1px solid #036635;
+          color: $secondary-button-color;
+          background-color: $primary-color;
+          border: 1px solid $secondary-button-color;
         }
 
         &.save {
-          background-color: #036635;
-          color: white;
-          border: 1px solid #064e3b;
+          background-color: $secondary-button-color;
+          color: $primary-color;
+          border: 1px solid $secondary-button-color;
         }
       }
     }
