@@ -53,19 +53,7 @@ function App() {
         >
           <Route path="/" element={<Home />} />
           <Route path="blog/:id" element={<Article />} />
-          <Route path="profile/:id" element={<Profile />} />
-
-          {/* <Route path="/blog" element={<Blog />} /> */}
-
-          <Route path="dilli-o-dilli" element={<DilliODilli />} />
-
-          <Route
-            path="extracts-from-a-lovers-notebook"
-            element={<ExtractsFromLoversNotebook />}
-          />
-          <Route path="life-by-the-sea" element={<LifeByTheSea />} />
-          <Route path="thats-life" element={<ThatsLife />} />
-          <Route path="a-woman-in-brothel" element={<WomanInBrothel />} />
+          <Route path="profile/:userId" element={<Profile />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
         </Route>

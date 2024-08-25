@@ -1,45 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import ProfileHeader from "../components/profile/ProfileHeader";
-import { listUserBlog } from "../appwrite/database";
-import { getFile } from "../appwrite/storage";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Byline from "../components/postcardByline/Byline";
-import { getUser } from "../appwrite/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchBlogs } from "../store/blogSlice";
+import { extractTextFromContent } from "../utils/contentUtils";
 
 function Profile() {
-  const [blogs, setBlogs] = useState([]);
+  const { userId } = useParams();
+  const dispatch = useDispatch();
+  const blogs = useSelector((state) => state.blog.blogs);
+
+  // Filter blogs by authorId
+  const authorBlogs = blogs.filter((blog) => blog.authorId === userId);
 
   useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        const userData = await getUser();
-        console.log(userData);
-        const blogData = await listUserBlog(userData.$id);
-        console.log("userBlogData", blogData);
-
-        // Fetch image URLs for each blog
-        const blogsWithImages = await Promise.all(
-          blogData.map(async (blog) => {
-            const image = await getFile(blog.imageId);
-            return { ...blog, imageUrl: image.href };
-          })
-        );
-
-        setBlogs(blogsWithImages);
-      } catch (error) {
-        console.error("Error fetching blogs:", error);
-      }
-    };
-    fetchBlogs();
-  }, []);
+    dispatch(fetchBlogs());
+  }, [dispatch]);
 
   return (
     <section className="profile-section">
-      <ProfileHeader />
+      <ProfileHeader id={userId} />
       <div className="container">
         <div className="postcard-b-section">
-          {blogs.length > 0 ? (
-            blogs.map((blog) => (
+          {authorBlogs.length > 0 ? (
+            authorBlogs.map((blog) => (
               <div key={blog.$id} className="postcard-b-content">
                 <Link
                   onClick={() => window.scrollTo(0, 0)}
@@ -50,10 +35,22 @@ function Profile() {
                   </div>
                   <div className="postcard-b-content__text">
                     <h2>{blog.title}</h2>
-                    <p>{blog.content?.substring(0, 200)}...</p>
+                    <p>
+                      {blog.content
+                        ? extractTextFromContent(blog.content)?.substring(
+                            0,
+                            100
+                          )
+                        : "No content available"}
+                      ...
+                    </p>
                   </div>
                 </Link>
-                <Byline date={blog.date} read={blog.read} />
+                <Byline
+                  date={blog.$createdAt}
+                  author_name={blog.authorName}
+                  author_id={blog.authorId}
+                />
               </div>
             ))
           ) : (

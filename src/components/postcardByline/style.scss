@@ -1,5 +1,11 @@
 @import "../../index.scss";
 
+.byline-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .byline {
   display: flex;
   gap: 1rem;
@@ -12,13 +18,24 @@
     height: 3.2rem;
   }
 
-  &__text p {
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    color: $text-color;
-    margin-bottom: 0;
-    font-family: "Poppins", sans-serif;
+  &__text {
+    .author a {
+      text-transform: uppercase;
+      color: $text-color;
+      font-size: 1.2rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      color: $text-color;
+      margin-bottom: 0;
+    }
   }
 
   &__date {
@@ -26,4 +43,11 @@
     display: flex;
     gap: 1rem;
   }
+}
+
+.action-buttons {
+  display: flex;
+  font-size: 2rem;
+  gap: 2rem;
+  margin-right: 3rem;
 }

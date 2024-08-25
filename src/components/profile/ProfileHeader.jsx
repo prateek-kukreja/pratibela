@@ -5,10 +5,13 @@ import Model from "./model/Model";
 import { useSelector } from "react-redux";
 import { Avatar } from "@mui/material";
 
-function Profile() {
+function ProfileHeader({ id }) {
   const [modal, setModal] = useState(false);
 
   const userProfile = useSelector((state) => state.user.userProfile);
+
+  console.log(userProfile);
+  // const user = useSelector((state) => state.auth.userData);
 
   const toggleModal = () => {
     setModal(!modal);
@@ -69,4 +72,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default ProfileHeader;

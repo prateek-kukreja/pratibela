@@ -1,11 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  fetchBlogs,
-  selectBlogs,
-  selectBlogStatus,
-  selectBlogError,
-} from "../../../store/blogSlice";
+import { fetchBlogs } from "../../../store/blogSlice";
 import { extractTextFromContent } from "../../../utils/contentUtils";
 import { Link } from "react-router-dom";
 import Byline from "../../postcardByline/Byline";
@@ -13,18 +8,11 @@ import "./style.scss";
 
 function Postcard() {
   const dispatch = useDispatch();
-  const blogs = useSelector(selectBlogs);
-  const status = useSelector(selectBlogStatus);
-  const error = useSelector(selectBlogError);
+  const blogs = useSelector((state) => state.blog.blogs);
 
   useEffect(() => {
-    if (status === "idle") {
-      dispatch(fetchBlogs());
-    }
-  }, [status, dispatch]);
-
-  if (status === "loading") return <p>Loading...</p>;
-  if (status === "failed") return <p>{error}</p>;
+    dispatch(fetchBlogs());
+  }, [dispatch]);
 
   return (
     <div className="postcard-b-section">
@@ -48,7 +36,11 @@ function Postcard() {
                 </p>
               </div>
             </Link>
-            <Byline date={blog.$createdAt} author_name={blog.authorName} />
+            <Byline
+              date={blog.$createdAt}
+              author_name={blog.authorName}
+              author_id={blog.authorId}
+            />
           </div>
         ))
       ) : (
