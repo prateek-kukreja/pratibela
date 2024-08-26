@@ -20,7 +20,7 @@ function Profile() {
 
   return (
     <section className="profile-section">
-      <ProfileHeader id={userId} />
+      <ProfileHeader userId={userId} />
       <div className="container">
         <div className="postcard-b-section">
           {authorBlogs.length > 0 ? (

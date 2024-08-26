@@ -1,27 +1,29 @@
 import { LiaTimesSolid } from "react-icons/lia";
 import "./style.scss";
-import { createImageFile } from "../../../appwrite/storage.js";
-import { useEffect, useRef, useState } from "react";
+import{creactI}
+
+import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
-import { addUserProfile } from "../../../store/userSlice.js";
+import axios from "axios";
 
-function Model({ toggleModal, userProfile }) {
+function Model({ toggleModal, user_name, userId }) {
   const imgRef = useRef(null);
   const [profileImg, setProfileImg] = useState("");
 
   const [form, setForm] = useState({
     img: "",
-    name: "",
+    name: user_name,
     bio: "",
   });
 
-  useEffect(() => {
-    setForm((prevForm) => {
-      return { ...prevForm, ...userProfile };
-    });
-    setProfileImg(userProfile.img);
-  }, []);
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
+  };
 
   const openFile = () => {
     imgRef.current.click();
@@ -48,25 +50,33 @@ function Model({ toggleModal, userProfile }) {
     }));
   };
 
-  const handleFormChange = (e) => {
-    const { name, value } = e.target;
-
-    setForm((prevForm) => ({
-      ...prevForm,
-      [name]: value,
-    }));
-  };
-
-  const dispatch = useDispatch();
   const saveForm = async () => {
     if (form.name === "" || form.bio === "") {
       toast.error("All inputs are required!");
       return;
     }
 
-    dispatch(addUserProfile(form));
-    toggleModal();
-    toast.success("Profile has been updated");
+    try {
+      const response = await axios.patch(
+        `http://localhost:3001/users/${userId}/name`,
+        { name: form.name }
+      );
+
+      const updateImage = await createImageFile();
+      console.log(`User updated successfully: ${response.data.name}`);
+    } catch (error) {
+      console.log(
+        `Error updating user: ${
+          error.response ? error.response.data : error.message
+        }`,
+        error
+      );
+    }
+
+    console.log(form);
+
+    // toggleModal();
+    // toast.success("Profile has been updated");
   };
 
   return (

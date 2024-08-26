@@ -9,7 +9,9 @@ const config = {
 
   bucketID: String(import.meta.env.VITE_REACT_APP_APPWRITE_BUCKET_ID),
 
-  apiKey: String(import.meta.env.VITE_REACT_APP_APPWRITE_API_KEY),
+  bioDatabaseID: String(
+    import.meta.env.VITE_REACT_APP_APPWRITE_BIO_DATABASE_ID
+  ),
 };
 
 export default config;
