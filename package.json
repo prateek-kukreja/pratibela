@@ -2,12 +2,14 @@
   "name": "pratibela",
   "private": true,
   "version": "0.0.0",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node server.js"
   },
   "dependencies": {
     "@editorjs/editorjs": "^2.30.5",

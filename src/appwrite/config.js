@@ -8,6 +8,8 @@ const config = {
   collectionID: String(import.meta.env.VITE_REACT_APP_APPWRITE_COLLECTION_ID),
 
   bucketID: String(import.meta.env.VITE_REACT_APP_APPWRITE_BUCKET_ID),
+
+  apiKey: String(import.meta.env.VITE_REACT_APP_APPWRITE_API_KEY),
 };
 
 export default config;
