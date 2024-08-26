@@ -1,7 +1,5 @@
 import { LiaTimesSolid } from "react-icons/lia";
 import "./style.scss";
-import{creactI}
-
 import { useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
@@ -62,7 +60,6 @@ function Model({ toggleModal, user_name, userId }) {
         { name: form.name }
       );
 
-      const updateImage = await createImageFile();
       console.log(`User updated successfully: ${response.data.name}`);
     } catch (error) {
       console.log(
