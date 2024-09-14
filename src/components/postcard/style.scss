@@ -1,14 +1,14 @@
-@import "../../../index.scss";
+@import "../../index.scss";
 
 .postcard-b-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
-  margin: 4rem 0;
+  padding: 4rem 0;
 
   @media (max-width: 800px) {
     grid-template-columns: 1fr;
-    margin: 2rem 0;
+    padding: 2rem 0;
   }
 }
 
@@ -19,9 +19,9 @@
 
   &__img img {
     width: 100%;
-    height: 20rem;
+    height: 30rem;
     object-fit: cover;
-    border-radius: 0.4rem;
+    border-radius: 5px;
   }
 
   &__text {
@@ -30,11 +30,11 @@
     }
 
     h2 {
-      font-size: 2.2rem;
-      font-weight: 500;
+      font-size: 2.6rem;
+      font-weight: 600;
       text-transform: capitalize;
+
       margin: 0.8rem 0;
-      font-family: "Open Sans", sans-serif;
       color: $text-color;
 
       @media (max-width: 800px) {
@@ -46,8 +46,7 @@
       text-align: left;
       font-size: 1.6rem;
       margin-bottom: 2rem;
-      color: $text-color;
-      font-family: "Raleway", sans-serif;
+      color: $text-11;
 
       @media (max-width: 800px) {
         font-size: 1.6rem;

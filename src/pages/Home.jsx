@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/header/Hero";
 import Footer from "../components/footer/Footer";
-import Postcard from "../components/article/postcard/Postcard";
+import Postcard from "../components/postcard/Postcard";
 
 function Home() {
   const head = "Pratibela";

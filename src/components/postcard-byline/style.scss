@@ -4,6 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 1rem 0;
+  font-size: 1.1rem;
 }
 
 .byline {
@@ -19,10 +21,12 @@
   }
 
   &__text {
+    display: flex;
+    gap: 0.6rem;
+
     .author a {
-      text-transform: uppercase;
-      color: $text-color;
-      font-size: 1.2rem;
+      font-weight: bold;
+      color: $text-11;
 
       &:hover {
         text-decoration: underline;
@@ -32,8 +36,7 @@
     p {
       text-align: left;
       text-transform: uppercase;
-      font-size: 1.2rem;
-      color: $text-color;
+      color: $text-11;
       margin-bottom: 0;
     }
   }
@@ -50,4 +53,9 @@
   font-size: 2rem;
   gap: 2rem;
   margin-right: 3rem;
+}
+
+.divider {
+  border-left: 1px solid $text-11;
+  color: $text-11;
 }

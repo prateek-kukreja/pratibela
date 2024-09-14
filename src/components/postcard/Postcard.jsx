@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchBlogs } from "../../../store/blogSlice";
-import { extractTextFromContent } from "../../../utils/contentUtils";
+import { fetchBlogs } from "../../store/blogSlice";
+import { extractTextFromContent } from "../../utils/contentUtils";
 import { Link } from "react-router-dom";
-import Byline from "../../postcardByline/Byline";
+import Byline from "../postcard-byline/Byline";
 import "./style.scss";
 
 function Postcard() {
@@ -26,21 +26,22 @@ function Postcard() {
               <div className="postcard-b-content__img">
                 <img src={blog.imageUrl} alt={blog.title} />
               </div>
+              <Byline
+                date={blog.$createdAt}
+                author_name={blog.authorName}
+                author_id={blog.authorId}
+                blog_content={blog.content}
+              />
               <div className="postcard-b-content__text">
-                <h2>{blog.title}</h2>
+                <h2>{blog.title?.substring(0, 100)}</h2>
                 <p>
                   {blog.content
-                    ? extractTextFromContent(blog.content)?.substring(0, 100)
-                    : "No content available"}
+                    ? extractTextFromContent(blog.content)?.substring(0, 110)
+                    : ""}
                   ...
                 </p>
               </div>
             </Link>
-            <Byline
-              date={blog.$createdAt}
-              author_name={blog.authorName}
-              author_id={blog.authorId}
-            />
           </div>
         ))
       ) : (
