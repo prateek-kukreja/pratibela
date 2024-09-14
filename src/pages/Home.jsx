@@ -6,7 +6,7 @@ import Postcard from "../components/article/postcard/Postcard";
 function Home() {
   const head = "Pratibela";
   const desc =
-    "Welcome to your everyday blog, filled with content you'll love.";
+    "Read the latest news, framework releases, tips, and sometimes tutorials from the Pratibela team.";
 
   return (
     <>

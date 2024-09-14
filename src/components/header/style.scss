@@ -90,32 +90,89 @@
 
 @import "../../index.scss";
 
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap");
-
 .hero-section {
   background-color: $secondary-color;
-  color: $text-color;
 }
 
 .hero-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 70vh;
+  height: 60vh;
+  margin: 0 8rem;
+
+  @media (max-width: 450px) {
+    margin: 0;
+  }
 
   &__text {
-    text-align: center;
+    margin-bottom: 3rem;
 
     h1 {
-      font-size: 5.2rem;
-      text-transform: capitalize;
-      font-family: "DM Serif Text", serif;
+      font-size: 4.6rem;
+      font-weight: 600;
+      color: $text-12;
     }
 
     p {
-      font-size: 2rem;
-      font-family: "Raleway", sans-serif;
-      margin-bottom: 4rem;
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: $text-11;
+      max-width: 60rem;
+    }
+  }
+
+  &__newsletter {
+    display: flex;
+    gap: 1rem;
+
+    .input {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 23rem;
+      height: 3rem;
+      border: 1px solid;
+      border-radius: 5px;
+      padding: 16px 8px;
+      background-color: #fff;
+
+      &:focus {
+        outline: 2px solid #5a45ff !important;
+      }
+
+      @media (max-width: 450px) {
+        width: 20rem;
+      }
+
+      .email-icon {
+        font-size: 2rem;
+        color: #757575;
+      }
+
+      input {
+        outline: none;
+        border: none;
+        background-color: inherit;
+        font-family: "Poppins", sans-serif;
+        width: 100%;
+        color: #757575;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: #fff;
+      background-color: $text-12;
+      border-radius: 5px;
+      font-weight: bold;
+      padding: 0 8px;
+      border: none;
+
+      &:hover {
+        background-color: #2f2e2a;
+      }
     }
   }
 }

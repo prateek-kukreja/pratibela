@@ -1,10 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -18,9 +12,12 @@ html {
 }
 
 /* variables */
-$primary-color: #f9f9f9;
-$secondary-color: #ecf4e5;
-$text-color: #191b1f;
+$primary-color: #ffffff;
+$secondary-color: #f9f9f8;
+$text-12: #21201c;
+$text-11: #080800a1;
+$text-color: #21201c;
+
 $divider-color: #738a94;
 $button-color: #26a8ed;
 $secondary-button-color: #ff3975;
@@ -42,6 +39,16 @@ body.padding-top {
   max-width: 108rem !important;
   margin: 0 auto !important;
   padding: 0 2rem !important;
+  border-left: 2px dashed #e5e7eb;
+  border-right: 2px dashed #e5e7eb;
+
+  @media (max-width: 450px) {
+    border: none;
+  }
+
+  @media (max-width: 1080px) {
+    border: none;
+  }
 }
 
 .custom-toast {
