@@ -1,6 +1,9 @@
+@import "../../index.scss";
+
 .pratibela-footer {
-  color: #191b1f;
-  background-color: #ecf4e5;
+  color: $text-12;
+  background-color: $secondary-color;
+  border: 2px dashed #e5e7eb;
 }
 
 .pratibela-footer-content {
@@ -19,6 +22,11 @@
     color: #191b1f;
     text-decoration: none;
     font-weight: 600;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -27,9 +35,10 @@
 
   a {
     margin-left: 20px;
+    opacity: 0.6;
 
-    &:first-of-type:before {
-      display: none;
+    &:hover {
+      opacity: 1;
     }
   }
 }

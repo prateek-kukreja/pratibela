@@ -22,8 +22,11 @@ function Footer() {
               <Link onClick={() => window.scrollTo(0, 0)} to="/">
                 Blogs
               </Link>
-              <a href="https://x.com/pratibeladotcom" target="_blank">
-                X (formerly twitter)
+              <a
+                href="https://github.com/prateek-kukreja/pratibela"
+                target="_blank"
+              >
+                Github
               </a>
             </div>
           </div>
