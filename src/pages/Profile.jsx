@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import ProfileHeader from "../components/profile/ProfileHeader";
 import { Link, useParams } from "react-router-dom";
-import Byline from "../components/postcardByline/Byline";
+import Byline from "../components/postcard-byline/Byline";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchBlogs } from "../store/blogSlice";
 import { extractTextFromContent } from "../utils/contentUtils";
