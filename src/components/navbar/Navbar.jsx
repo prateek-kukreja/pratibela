@@ -1,7 +1,7 @@
 import "./style.scss";
 import { Link } from "react-router-dom";
 import { getUser } from "../../appwrite/auth.js";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../store/authSlice.js";
 import { HiOutlinePencilSquare } from "react-icons/hi2";
@@ -53,16 +53,14 @@ function NavBar() {
                   contact
                 </Link>
               </li>
+              <li>
+                <Link onClick={() => window.scrollTo(0, 0)} to="/create-story">
+                  Write
+                </Link>
+              </li>
             </ul>
 
             <div className="menu-auth">
-              <Link onClick={() => window.scrollTo(0, 0)} to="/create-story">
-                <span>
-                  <HiOutlinePencilSquare />
-                </span>
-                Write
-              </Link>
-
               <div className="menu-auth__user-actions">
                 {!user && (
                   <Link to="/signin">
