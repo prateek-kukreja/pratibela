@@ -30,7 +30,7 @@ function Byline({ date, author_name, author_id, blog_content }) {
           <div className="divider"></div>
           <p className="byline__date">
             <time>
-              {new Date("2024-09-12").toLocaleDateString("en-GB", {
+              {new Date(date).toLocaleDateString("en-GB", {
                 day: "numeric",
                 month: "long",
               })}
