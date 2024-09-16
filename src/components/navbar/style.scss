@@ -20,6 +20,7 @@ nav {
 
   @media (max-width: 450px) {
     justify-content: space-between;
+    margin: 0;
   }
 }
 
@@ -98,9 +99,28 @@ nav {
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
+  opacity: 0.6;
 
-  &:hover:before {
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -0.25rem;
+    height: 0.1rem;
+    width: 0;
+    background-color: $grey-color;
+    transition: all 0.35s ease-in-out;
+  }
+
+  &:hover::before {
     width: 100%;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 450px) {
+    opacity: 1;
   }
 }
 

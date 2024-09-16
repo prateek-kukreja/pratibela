@@ -53,14 +53,17 @@ function NavBar() {
                   contact
                 </Link>
               </li>
-              <li>
-                <Link onClick={() => window.scrollTo(0, 0)} to="/create-story">
-                  Write
-                </Link>
-              </li>
             </ul>
 
             <div className="menu-auth">
+              <div>
+                <Link onClick={() => window.scrollTo(0, 0)} to="/create-story">
+                  <span>
+                    <HiOutlinePencilSquare />
+                  </span>
+                  Write
+                </Link>
+              </div>
               <div className="menu-auth__user-actions">
                 {!user && (
                   <Link to="/signin">
